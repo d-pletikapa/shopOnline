@@ -1,0 +1,7 @@
+@import url('var.css');
+@import url('normalize.css');
+@import url('global-style.css');
+@import url('container/container.css');
+@import url('header/header.css');
+@import url('main/main.css');
+@import url('footer/footer.css');

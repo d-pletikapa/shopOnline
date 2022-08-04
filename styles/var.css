@@ -1,0 +1,142 @@
+:root {
+  --c-body-txt: #FFFFFF;
+  --с-body-bg: #FFFFFF;
+  --c-body-border-outline: transparent;
+
+  --max-width-section: 1920px;
+  --padding-section: 9px 75px 45px 75px;
+  --padding-header: 27px 75px 0 75px;
+
+  --search-form-width: 757px;
+  --search-btn-width: 101px;
+  --search-btn-height: 54px;
+
+  --f-s-main-header: 70px;
+  --l-h-main-header: 91px;
+  --f-s-main__subtitle: 16px;
+  --l-h-main__subtitle: 21px;
+  --f-s-main__counter: 60px;
+  --l-h-main__counter: 78px;
+  --f-s-main__text: 32px;
+  --l-h-main__text: 42px;
+
+  --main-offers-w-shrink-main-banner: 0px;
+  --main-offers-h-shrink-main-banner: 0px;
+  --main-offers-w-shrink-1x1-card: 0px;
+  --main-offers-w-shrink-2x1-card: 0px;
+  --main-offers-h-shrink-1x1-card: 0px;
+  --main-offers-h-shrink-2x1-card: 0px;
+  --main-offers-w-shrink-2x2-card: 0px;
+  --main-offers-h-shrink-2x2-card: 0px;
+  --main-offers-w-shrink-1x2-card: 0px;
+  --main-offers-h-shrink-1x2-card: 0px;
+}
+
+@media (max-width: 1900px) {
+:root {
+  --main-offers-w-shrink-main-banner: 250px;
+  --main-offers-w-shrink-1x1-card: auto;
+  --main-offers-w-shrink-2x1-card: auto;
+  --main-offers-w-shrink-2x2-card: auto;
+  --main-offers-w-shrink-1x2-card: auto;
+  --main-offers-h-shrink-1x2-card: auto;
+}
+}
+
+@media (max-width:1665px) {
+  :root {
+    --max-width-section: 1520px;
+    --padding-section: 30px 42px 30px 42px;
+    --padding-header: 34px 42px 30px 42px;
+    --search-form-width: 1246px;
+
+    --f-s-main-header: 40px;
+    --l-h-main-header: 52px;
+    --f-s-main__counter: 40px;
+    --l-h-main__counter: 52px;
+    --f-s-main__text: 20px;
+    --l-h-main__text: 26px;
+
+
+    --main-offers-w-shrink-main-banner: 830px;
+    --main-offers-h-shrink-main-banner: 166px;
+    --main-offers-w-shrink-1x1-card: 28px;
+    --main-offers-h-shrink-1x1-card: 26px;
+    --main-offers-w-shrink-2x1-card: 86px;
+    --main-offers-h-shrink-2x1-card: 34px;
+    --main-offers-w-shrink-2x2-card: 220px;
+    --main-offers-h-shrink-2x2-card: 98px;
+    --main-offers-w-shrink-1x2-card: 39px;
+    --main-offers-h-shrink-1x2-card: 106px;
+  }
+}
+
+@media (max-width:1023px) {
+  :root {
+    --max-width-section: 1023px;
+    --padding-section: 25px 34px 25px 34px;
+    --padding-header: 25px 34px 25px 34px;
+    --search-form-width: 1023px;
+
+    --search-btn-width: 82px;
+    --search-btn-height: 42px;
+
+    --f-s-main-header: 30px;
+    --l-h-main-header: 39px;
+    --f-s-main__subtitle: 12px;
+    --l-h-main__subtitle: 16px;
+    --f-s-main__counter: 30px;
+    --l-h-main__counter: 39px;
+    --f-s-main__text: 16px;
+    --l-h-main__text: 21px;
+
+    --main-offers-w-shrink-main-banner: 1070px;
+    --main-offers-h-shrink-main-banner: 200px;
+    --main-offers-w-shrink-1x1-card: 105px;
+    --main-offers-h-shrink-1x1-card: 98px;
+    --main-offers-w-shrink-2x1-card: 250px;
+    --main-offers-h-shrink-2x1-card: 102px;
+    --main-offers-w-shrink-2x2-card: 460px;
+    --main-offers-h-shrink-2x2-card: 179px;
+    --main-offers-w-shrink-1x2-card: 63px;
+    --main-offers-h-shrink-1x2-card: 243px;
+    --main-offers-w-shrink-1x2-halfed-card: 67px;
+    --main-offers-h-shrink-1x2-halfed-card: 101px;
+  }
+}
+
+@media (max-width:690px)  {
+  :root {
+    --max-width-section: 690px;
+    --padding-section: 20px 20px 20px 20px;
+    --padding-header: 20px;
+    --search-form-width: 690px;
+    --search-btn-width: 50px;
+    --search-btn-height: 30px;
+
+    --f-s-main-header: 22px;
+    --l-h-main-header: 29px;
+    --f-s-main__subtitle: 8px;
+    --l-h-main__subtitle: 10px;
+    --f-s-main__counter: 20px;
+    --l-h-main__counter: 26px;
+    --f-s-main__text: 12px;
+    --l-h-main__text: 16px;
+
+    --main-offers-w-shrink-main-banner: 1490px;
+    --main-offers-h-shrink-main-banner: 140px;
+
+
+    --main-offers-w-shrink-1x1-card: 115px;
+    --main-offers-h-shrink-1x1-card: 108px;
+    --main-offers-w-shrink-2x1-card: 270px;
+    --main-offers-h-shrink-2x1-card: 110px;
+    --main-offers-w-shrink-2x2-card: 880px;
+    --main-offers-h-shrink-2x2-card: 393px;
+    --main-offers-w-shrink-1x2-card: 115px;
+    --main-offers-h-shrink-1x2-card: 321px;
+    --main-offers-w-shrink-1x2-halfed-card: 115px;
+    --main-offers-h-shrink-1x2-halfed-card: 133px;
+
+  }
+}
