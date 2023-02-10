@@ -1,5 +1,5 @@
 # 3-7-grid
-
+## 6-02 (JS)
 /*.grid {
 	display: grid;
 	/* grid-template-columns: 150px 20% auto;
