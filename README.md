@@ -1,4 +1,4 @@
-# 3-7-grid
+# 3-7-grid shopOnline
 ## 6-02 (JS)
 /*.grid {
 	display: grid;
