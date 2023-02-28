@@ -1,5 +1,6 @@
 # 3-7-grid shopOnline
 ## 6-02 (JS)
+## 6-05 (JS)
 /*.grid {
 	display: grid;
 	/* grid-template-columns: 150px 20% auto;

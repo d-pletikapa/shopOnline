@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+	<link rel="stylesheet" href="./styles/blog/blog.css">
+	<script type="module" src="./js/blog.js"></script>
+</head>
+
+<body>
+	<main class="blog__main">
+		<section class="blog__main-section section">
+			<div class="container">
+
+			</div>
+		</section>
+		<nav class="blog-nav section">
+			<div class="container">
+				<ul class="blog__pagination">
+					<li class="pagination__item"><a href="?page=1" rel="prev"><svg width="37" height="37" viewBox="0 0 37 37"
+								fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_0_255)">
+									<path
+										d="M32.375 16.9583H10.5296L16.0487 11.4237L13.875 9.25L4.625 18.5L13.875 27.75L16.0487 25.5763L10.5296 20.0417H32.375V16.9583Z"
+										fill="#8F8F8F" />
+								</g>
+								<defs>
+									<clipPath id="clip0_0_255">
+										<rect width="37" height="37" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a></li>
+					<!-- <li class="pagination__item f"><a href="?page=2" rel="prev"></a></li> -->
+					<a class="pagination__number" href="">
+						<li class="pagination__item pagination__page">1</li>
+					</a>
+					<a class="pagination__number" href="">
+						<li class="pagination__item pagination__page">2
+						</li>
+					</a>
+					<a class="pagination__number" href="">
+						<li class="pagination__item pagination__page">3</li>
+					</a>
+					<!-- <li class="pagination__item l"><a href="?page=4" rel="next">
+						</a></li> -->
+					<li class="pagination__item next"><a href="?page=5" rel="next">
+							<svg width="37" height="37" viewBox="0 0 37 37" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_0_258)">
+									<path
+										d="M4.625 16.9583H26.4704L20.9513 11.4237L23.125 9.25L32.375 18.5L23.125 27.75L20.9513 25.5763L26.4704 20.0417H4.625V16.9583Z"
+										fill="#3670C7" />
+								</g>
+								<defs>
+									<clipPath id="clip0_0_258">
+										<rect width="37" height="37" fill="white" transform="matrix(-1 0 0 1 37 0)" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a></li>
+				</ul>
+			</div>
+		</nav>
+	</main>
+
+</body>
+
+<!-- <arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/1.png" alt="article__preview-img--1">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title">Как ухаживать за обувью
+								из кожи</h2>
+							<p class="arctile__creation-date">22 октября 2021, 12:45</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">1.2K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/2.png" alt="article__preview-img--2">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">19 октября 2021, 10:23</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">1.9K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/3.png" alt="article__preview-img--3">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">25 апреля 2020, 12:24</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">3.2K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/4.png" alt="article__preview-img--4">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">22 октября 2021, 12:45</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">1.2K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/5.png" alt="article__preview-img--5">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">06 марта 2020, 15:34</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">1.9K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/6.png" alt="article__preview-img--6">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">21 декабря 2020, 15:34</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">3.1K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/7.png" alt="article__preview-img--7">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">06 марта 2020, 15:34</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">2.3K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/8.png" alt="article__preview-img--8">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">03 август 2021, 12:54</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">1.6K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/9.png" alt="article__preview-img--9">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">24 мая 2020, 19:31</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">3,6K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/10.png" alt="article__preview-img--10">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">19 октября 2021, 10:23</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">1.7K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/11.png" alt="article__preview-img--11">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">29 октября 2020, 12:42</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">4.2K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle>
+				<arcticle class="blog__article">
+					<img class="article__preview-img" src="./img/12.png" alt="article__preview-img--12">
+					<div class="article__preview-text">
+						<div class="article__preview-text-wrapper">
+							<h2 class="article__title"></h2>
+							<p class="arctile__creation-date">27 нобря 2020, 08:24</p>
+						</div>
+						<div class="article__counter">
+							<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+									stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span class="counter__views-text">0.6K</span>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
+									fill="#8F8F8F" />
+							</svg>
+							<span class="counter__commetns-text">0</span>
+						</div>
+					</div>
+				</arcticle> -->
+
+</html>
