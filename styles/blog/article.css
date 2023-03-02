@@ -3,8 +3,46 @@
 
 .article,
 .article__main-nav {
-	padding: 148px 0 80px 0;
+	padding: 148px 0 40px 0;
 	margin: 0 auto;
+}
+
+.article {
+	padding: 40px 0;
+}
+
+.article__main-nav p {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+	color: #525252;
+}
+
+.article__section {
+	max-width: 1095px;
+}
+
+.article__title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 65px;
+	color: #2D2D2D;
+	margin-bottom: 40px;
+}
+
+.article__paragraph {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 33px;
+	color: #2D2D2D;
+	margin-bottom: 100px;
+}
+
+.article__footer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
 
 .container {
@@ -14,6 +52,11 @@
 	margin: auto;
 	gap: 143px 0;
 	justify-content: space-between;
+}
+
+.container a:hover,
+.footer__back-link:hover svg {
+	color: #3670C7;
 }
 
 
@@ -27,6 +70,10 @@
 	font-size: 16px;
 	line-height: 21px;
 	color: #2D2D2D;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 .footer__back-link svg {
@@ -46,13 +93,17 @@
 	font-size: 16px;
 	line-height: 21px;
 	color: #8F8F8F;
+	margin-bottom: 15px;
 }
 
 .article__author-credentials {
+	display: flex;
+	justify-content: flex-end;
 	font-weight: 400;
 	font-size: 22px;
 	line-height: 33px;
 	color: #000000;
+	margin-bottom: 20px;
 }
 
 .counter__views-text {
@@ -83,4 +134,47 @@
 
 .counter__views-text {
 	margin-right: 25px;
+}
+
+.article__ads {
+	display: flex;
+	max-width: 532px;
+	flex-flow: column wrap;
+	row-gap: 50px;
+}
+
+.ads__card {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-end;
+	position: relative;
+	width: 532px;
+	height: 328px;
+}
+
+.ads__card img {
+	position: absolute;
+	z-index: 1;
+}
+
+
+.ads__text-wrapper {
+	z-index: 2;
+	margin-bottom: 43px;
+	padding-left: 30px
+}
+
+.ads__text-wrapper h2 {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 42px;
+	white-space: pre-line;
+	color: #FFFFFF;
+}
+
+.ads__text-wrapper p {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+	color: #FFFFFF;
 }

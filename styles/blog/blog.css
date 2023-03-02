@@ -145,10 +145,12 @@
 	color: #8F8F8F;
 }
 
-.pagination__item:hover,
-.pagination__item:active,
-.pagination__item:hover svg,
-.pagination__item:active svg {
+
+.pagination__item a:hover,
+.pagination__item a:active,
+.pagination__item a:hover svg,
+.pagination__item a:active svg,
+.article__link:hover {
 	color: #3670C7;
 }
 
@@ -164,7 +166,8 @@
 	text-decoration: none;
 }
 
-.pagination__page:hover {
+.pagination__number:hover li {
+	color: #3670C7;
 	border: 2px solid #3670C7;
 	border-radius: 4px;
 }

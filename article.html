@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Article-01</title>
 	<link rel="stylesheet" href="./styles/blog/article.css">
+	<script type="module" src="./js/article.js"></script>
 </head>
 
 <body>
@@ -14,51 +15,36 @@
 		<nav class="article__main-nav">
 			<div class="container">
 				<p>
-					<a href="">Главная</a>
+					<a href="index.html">Главная</a>
 					<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
 							fill="#525252" />
 					</svg>
 
-					<a href="">Блог</a>
+					<a href="blog.html">Блог</a>
 					<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
 							fill="#525252" />
 					</svg>
 
-					<a href="">Как ухаживать за обувью из кожи</a>
+					<a class="article__link" href=""></a>
 				</p>
 			</div>
 		</nav>
 		<article class="article">
 			<div class="container">
 				<section class="article__section">
-					<h1 class="article__title">Как ухаживать за обувью из кожи</h1>
-					<p class="article__paragraph">
-						Материала для обуви лучше натуральной кожи все ещё не придумали. Качественную кожу очень приятно
-						носить, она идеально
-						ложится по ноге, в нужных местах немного растягивается. В кожаной обуви, если она соответствует
-						погоде, создаётся
-						хороший микроклимат – ноги не мёрзнут, не потеют, и чувствуют себя очень комфортно. Неудивительно, что
-						по статистике
-						больше 60% покупателей выбирает обувь именно из гладкой натуральной кожи. Вдобавок кожа практична и не
-						требует
-						трудоёмкого ухода.
-						Но это совсем не означает, что можно раз в полгода протереть обувь тряпочкой и на этом остановиться.
-						Так же, как кожа
-						лица и тела, материал обуви нуждается в заботе. Регулярный уход надолго продлит срок службы любимой
-						пары и сделает её
-						аккуратной и сияющей, словно только что из магазина.
-					</p>
+					<h1 class="article__title"></h1>
+					<p class="article__paragraph"></p>
 					<div class="article__footer">
-							<a class="footer__back-link" href=""><svg width="18" height="12" viewBox="0 0 18 12" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M18 5H3.83L7.41 1.41L6 0L0 6L6 12L7.41 10.59L3.83 7H18V5Z" fill="#2D2D2D" />
-								</svg><span>К списку статей</span></a>
+						<a class="footer__back-link" href=""><svg width="18" height="21" viewBox="0 0 18 12"
+								fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 5H3.83L7.41 1.41L6 0L0 6L6 12L7.41 10.59L3.83 7H18V5Z" fill="" />
+							</svg><span>К списку статей</span></a>
 						<div class="footer__author-data">
-							<p class="article__author-credentials">Инга Соловьева</p>
+							<p class="article__author-credentials"></p>
 							<p class="arctile__creation-date">22 октября 2021, 12:45
 							</p>
 							<div class="article__counter">
@@ -81,14 +67,25 @@
 
 								<span class="counter__commetns-text">0</span>
 							</div>
-
-
-
 						</div>
 					</div>
 				</section>
-				<section class="article__advertisments">
-
+				<section class="article__ads">
+					<div class="ads__card">
+						<img src="./img/article/1.jpg" alt="">
+						<div class="ads__text-wrapper">
+							<h2>Горящие туры в Стамбул
+								от 20 000 руб.</h2>
+							<p>Окунись в настоящую восточную сказку</p>
+						</div>
+					</div>
+					<div class="ads__card">
+						<img src="./img/article/2.jpg" alt="">
+						<div class="ads__text-wrapper">
+							<h2>Новый RENAULT DUSTER</h2>
+							<p>Легендарный внедорожник в новом дизайне</p>
+						</div>
+					</div>
 				</section>
 
 		</article>

@@ -1,45 +1,35 @@
-// https://gorest.co.in/public-api/posts
-// https://gorest.co.in/public-api/posts?page=24
+// export
+const getParamValueFromUrl = (param) => {
+	const searchParams = new URLSearchParams(window.location.search);
 
-// Список статей, где каждый элемент должен быть ссылкой на статью вида article.html ? id = 945(вместо 945 - id соответствующей статьи).Сам список находится в свойстве data в ответе на список статей.
-const articlesContainer = document.querySelector('.blog__main-section .container');
-
-const getPageNumberFromUrl = () => {
-	// const currentUrl = window.location.href;
-	// console.log("🚀 ~ file: blog.js:9 ~ getPageNumberFromUrl ~ currentUrl:", currentUrl)
-
-	const currentSearch = window.location.search;
-	console.log("🚀 ~ file: blog.js:10 ~ getPageNumberFromUrl ~ currentSearch:", currentSearch)
-
-	// const searchParams = new URLSearchParams(currentUrl.search);
-	// const pageNumber = searchParams.get('page');
+	const pageNumber = searchParams.get(`${param}`);
 	// console.log("🚀 ~ file: blog.js:11 ~ getPageNumberFromUrl ~ pageNumber:", pageNumber)
-	return currentSearch;
+	return pageNumber;
 }
+{
+	const articlesContainer = document.querySelector('.blog__main-section .container');
 
-getPageNumberFromUrl();
+	const getArticleList = async () => {
+		const result = await fetch(`https://gorest.co.in/public-api/posts?page=${getParamValueFromUrl('page')}`);
+		const data = await result.json();
+		return data;
+	}
 
-const getArticleList = async () => {
-	const result = await fetch(`https://gorest.co.in/public-api/posts${getPageNumberFromUrl()}`);
-	const data = await result.json();
-	return data;
-}
+	const renderArticles = async () => {
+		const data = await getArticleList();
+		console.log("🚀 ~ file: blog.js:13 ~ renderArticles ~ data:", data);
+		const articles = data.data.map((item, index) => {
 
-const renderArticles = async () => {
-	const data = await getArticleList();
-	console.log("🚀 ~ file: blog.js:13 ~ renderArticles ~ data:", data);
-	const articles = data.data.map((item, index) => {
-
-		const newArticle = document.createElement('article');
-		newArticle.className = 'blog__article';
-		newArticle.id = `${item.id}`;
-		newArticle.innerHTML = `
-		<a class="article__link" href="article.html?${item.id}">
+			const newArticle = document.createElement('article');
+			newArticle.className = 'blog__article';
+			newArticle.id = `${item.id}`;
+			newArticle.innerHTML = `
+		<a class="article__link" href="article.html?id=${item.id}">
 			<img class="article__preview-img" src="./img/${index + 1}.png" alt="article__preview-img--${index + 1}">
 		</a>
 					<div class="article__preview-text">
 						<div class="article__preview-text-wrapper">
-							<a class="article__link" href="article.html?${item.id}">
+							<a class="article__link" href="article.html?id=${item.id}">
 								<h2 class="article__title">${item.title}</h2>
 							</a>
 							<p class="arctile__creation-date">22 октября 2021, 12:45</p>
@@ -65,29 +55,33 @@ const renderArticles = async () => {
 						</div>
 					</div>
 		`;
-		return newArticle;
-	});
-	articlesContainer.append(...articles);
-};
-renderArticles();
+			return newArticle;
+		});
+		articlesContainer.append(...articles);
+	};
+	renderArticles();
 
-const getPaginationList = async () => {
-	const data = await getArticleList();
-	const paginationPage = document.querySelectorAll('.pagination__number');
-	const CurrentPage = data.meta.pagination.page;
-	const allPages = data.meta.pagination.pages;
-	const paginationArrows = document.querySelectorAll('.pagination__item a');
-	CurrentPage <= 2 ? paginationArrows[0].href = `blog.html` : paginationArrows[0].href = `?page=${CurrentPage - 1}`;
+	const getPaginationList = async () => {
+		const data = await getArticleList();
+		const paginationPage = document.querySelectorAll('.pagination__number');
+		const CurrentPage = data.meta.pagination.page;
+		const allPages = data.meta.pagination.pages;
+		const paginationArrows = document.querySelectorAll('.pagination__item a');
+		CurrentPage <= 2 ? paginationArrows[0].href = `blog.html` : paginationArrows[0].href = `?page=${CurrentPage - 1}`;
 
 
-	paginationArrows[1].href = `?page=${CurrentPage + 1}`;
-	paginationPage.forEach((item, index) => {
-		if (CurrentPage < allPages) {
-
-			item.href = `blog.html?page=${CurrentPage + index}`;
-			console.log(item)
-			item.firstElementChild.textContent = `${CurrentPage + index}`;
-		}
-	})
+		paginationArrows[1].href = `?page=${CurrentPage + 1}`;
+		paginationPage.forEach((item, index) => {
+			if (CurrentPage < allPages) {
+				if (CurrentPage === 1 && index === 0) {
+					item.href = `blog.html`;
+					item.firstElementChild.textContent = `1`;
+				} else {
+					item.href = `blog.html?page=${CurrentPage + index}`;
+					item.firstElementChild.textContent = `${CurrentPage + index}`;
+				}
+			}
+		})
+	}
+	getPaginationList();
 }
-getPaginationList();
