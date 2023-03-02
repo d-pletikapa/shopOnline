@@ -119,14 +119,6 @@
 	height: 37px;
 }
 
-/* .pagination__item:first-child {
-	margin-right: 24px;
-} */
-
-/* .blog__pagination li:first-of-type {
-	margin-right: 24px;
-} */
-
 .blog__pagination a:last-of-type {
 	margin-right: 24px;
 }
