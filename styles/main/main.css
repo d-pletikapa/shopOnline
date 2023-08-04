@@ -82,7 +82,7 @@
   padding-left: 20px;
 }
 
-.main__label {
+.main__label, .card__label {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -296,6 +296,70 @@
   grid-area: card--10;
 }
 
+/* profit__offers */
+
+.profit__offers {
+  padding-top: 55px;
+  padding-bottom: 70px;
+  display: grid;
+  max-width: 1770px;
+  gap: 30px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  grid-template-areas:
+  "profit-header--1 profit-header--1 profit-header--1 profit-header--1"
+  "profit__card--1 profit__card--2 profit__card--3 profit__card--4"
+  ". . . .";
+}
+.profit__header {
+  color: #2D2D2D;
+  font-size: 50px;
+  line-height: 65px;
+  grid-area: profit-header--1;
+}
+.profit__card {
+  display: flex;
+  flex-flow: column wrap;
+  width: 420px;
+  height: 395px;
+}
+.card__image-wrapper, .card__image-wrapper img{
+  width: 420px;
+  height: 295px;
+  border-radius: 14px;
+}
+.card__image-wrapper {
+  position: relative;
+  background: lightgray 50% / cover no-repeat;
+  margin-bottom: 20px;
+}
+
+.profit__label--btm-lft {
+  position: absolute;
+  top: 187px;
+  left: 20px;
+}
+.card__price {
+  color: #2D2D2D;
+  margin-bottom: 14px;
+}
+.price__text--disc {
+  font-size: 28px;
+  font-weight: 700;
+  margin-right: 28px;
+}
+.price__text--full {
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.card__product-name {
+  color: #2D2D2D;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+}
 
 @media (max-width:1900px) {
   .main__offers {
@@ -303,7 +367,7 @@
     padding-right: 0;
     display: grid;
     max-width: 1520px;
-    gap: 60px;
+    gap: 30px 50px;
     /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
     /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;*/
     grid-template-columns: repeat(6, 1fr);
@@ -316,6 +380,21 @@
   "card--5 card--5 card--3 card--3 card--6 card--6"
   "card--7 card--7 card--7 card--7 card--8 card--9"
   "card--7 card--7 card--7 card--7 card--8 card--10";
+  }
+
+  .profit__offers {
+    padding-top: 55px;
+    padding-bottom: 70px;
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 1520px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    grid-template-areas:
+    "profit-header--1 profit-header--1 profit-header--1"
+    "profit__card--1 profit__card--2 profit__card--3 "
+    ". . . ";
   }
 }
 
@@ -341,9 +420,21 @@
   "card--7 card--7 card--7 card--7"
   "card--7 card--7 card--7 card--7";
   }
+
+  .profit__offers {
+    max-width: 940px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 59px 99px;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    grid-template-areas:
+    "profit-header--1 profit-header--1"
+    "profit__card--1 profit__card--2"
+    ". . ";
+  }
   .main__offers {
     max-width: 940px;
-}
+  }
   .main__offers-card--1 p{
     margin-bottom: 32px;
     font-size: 24px;
@@ -461,6 +552,20 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
+  }
+
+  .profit__offers {
+    max-width: 700px;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 20px;
+    grid-template-rows: auto;
+    justify-items: center;
+    justify-content: space-between;
+    grid-template-areas:
+    "profit-header--1"
+    "profit__card--1"
+    ". ";
   }
 
   .main__offers {
@@ -631,6 +736,39 @@
     "card--8 card--9"
     "card--8 card--10"
     "card--7 card--7";
+  }
+
+  .profit__offers {
+    max-width: 280px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    grid-template-rows: auto;
+    justify-items: center;
+    justify-content: space-around;
+    grid-template-areas:
+    "profit-header--1"
+    "profit__card--1"
+    ". ";
+  }
+
+  .profit__card {
+    display: flex;
+    flex-flow: column wrap;
+    width: 280px;
+    height: auto;
+  }
+
+  .card__image-wrapper, .card__image-wrapper img{
+    width: 280px;
+    height: 197px;
+  }
+  .profit__label--btm-lft {
+    top: 95px;
+  }
+
+  .profit__header {
+    font-size: 22px;
+    line-height: 29px;
   }
 
   .main__offers {

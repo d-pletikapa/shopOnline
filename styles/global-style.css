@@ -17,7 +17,6 @@ html {
 
   /*Additions*/
   border: var(--c-body-border-outline);
-  outline: var(--c-body-border-outline);
 }
 
 
@@ -40,7 +39,6 @@ img {
 button {
   padding: 0;
   cursor: pointer;
-  outline: none;
 }
 
 a {

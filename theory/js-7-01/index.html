@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.svg">
+  <title>Доступность прокачиваем</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/jquery-3.6.0.min.js"></script>
+  <script defer src="js/inert.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header__container">
+      <button class="header__burger" aria-haspopup="menu" aria-label="Открыть меню"></button>
+      <img class="header__logo" src="img/logo.svg" alt="Логотип">
+
+      <nav class="header__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#main">Главная</a></li>
+          <li class="navigation__item"><a href="#aboutus">О нас</a></li>
+          <li class="navigation__item"><a href="#help">Помощь</a></li>
+        </ul>
+        <button class="navigation__close" aria-label="Закрыть меню">
+          <svg class="modal-order__close-svg" height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg">
+            <path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0" />
+          </svg>
+        </button>
+      </nav>
+        <button class="navigation__city js-city-open">Калининград</button>
+
+        <a class="navigation__phone" href="tel:+74012240821">+7 (4012) 24 08 21</a>
+
+        
+     
+
+
+      <button class="header__sign2" aria-label="Вход в личный кабинет">
+        <svg class="header__sign2-svg" width="30" height="30" viewBox="0 0 30 30" fill="#0D1C41" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 0.833252C7.18004 0.833252 0.833374 7.17992 0.833374 14.9999C0.833374 22.8199 7.18004 29.1666 15 29.1666C22.82 29.1666 29.1667 22.8199 29.1667 14.9999C29.1667 7.17992 22.82 0.833252 15 0.833252ZM15 5.08325C17.3517 5.08325 19.25 6.98159 19.25 9.33325C19.25 11.6849 17.3517 13.5833 15 13.5833C12.6484 13.5833 10.75 11.6849 10.75 9.33325C10.75 6.98159 12.6484 5.08325 15 5.08325ZM15 25.1999C11.4584 25.1999 8.32754 23.3866 6.50004 20.6383C6.54254 17.8191 12.1667 16.2749 15 16.2749C17.8192 16.2749 23.4575 17.8191 23.5 20.6383C21.6725 23.3866 18.5417 25.1999 15 25.1999Z" />
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+  <div class="city">
+    <ul class="city__list">
+      <li class="city__list-item"><button class="city__choice">Москва</button></li>
+      <li class="city__list-item"><button class="city__choice">Санкт-Петербург</button></li>
+      <li class="city__list-item"><button class="city__choice">Калининград</button></li>
+      <li class="city__list-item"><button class="city__choice">Челябинск</button></li>
+      <li class="city__list-item"><button class="city__choice">Сочи</button></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <h1 class="visually-hidden">Компания "Дом построен" для вас построит дом вашей мечты!</h1>
+    <section class="present">
+      <div class="container">
+        <div class="present__container">
+          <div class="present__content">
+            <h2 class="present__title">Строительство домов в <span class="present__title-city">Калининграде</span></h2>
+
+            <ul class="present__list">
+              <li class="present__item">Помощь в подборе участка</li>
+              <li class="present__item">Геология</li>
+              <li class="present__item">Проектирование</li>
+              <li class="present__item">Строительство <a href="#">под ключ</a></li>
+            </ul>
+
+            <button class="present__btn" aria-haspopup="dialog">Заказать дом</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="what-building">
+      <div class="container">
+        <h2 class="what-building__title">Что мы строим</h2>
+
+        <ul class="what-building__list">
+          <li tabindex="0" class="what-building__item what-building__item_home">
+            <p class="what-building__text">Дома</p>
+          </li>
+          <li class="what-building__item what-building__item_cottage">
+            <p class="what-building__text">Коттеджи</p>
+          </li>
+          <li class="what-building__item what-building__item_townhouse">
+            <p class="what-building__text">Таунхаусы</p>
+          </li>
+          <li class="what-building__item what-building__item_mansion">
+            <p class="what-building__text">Особняки</p>
+          </li>
+          <li class="what-building__item what-building__item_village">
+            <p class="what-building__text">Дачи</p>
+          </li>
+          <li class="what-building__item what-building__item_sauna">
+            <p class="what-building__text">Бани</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="characteristics" id="characteristics">
+      <div class="container">
+        <h2 class="characteristics__main-title main-title">Характеристики</h2>
+        <ul class="characteristics__list">
+          <li class="characteristics__item">
+            <button class="characteristics__title  active" aria-expanded="false" type="button">Деревянный</button>
+            <div class="characteristics__description active">
+              <ul class="characteristics__list-description">
+                <li class="characteristics__item-description">
+                  <p>Тип фундамента</p>
+                  <p>Серый</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Стены</p>
+                  <p>Зеленые</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Крыша</p>
+                  <p>Треугольная</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="characteristics__item">
+            <button class="characteristics__title" aria-expanded="false" type="button">Кирпичный</button>
+            <div class="characteristics__description">
+              <ul class="characteristics__list-description">
+                <li class="characteristics__item-description">
+                  <p>Тип фундамента</p>
+                  <p>Серый</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Стены</p>
+                  <p>Зеленые</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Крыша</p>
+                  <p>Треугольная</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="characteristics__item">
+            <button class="characteristics__title" aria-expanded="false" type="button">Панельный</button>
+            <div class="characteristics__description">
+              <ul class="characteristics__list-description">
+                <li class="characteristics__item-description">
+                  <p>Тип фундамента</p>
+                  <p>Серый</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Стены</p>
+                  <p>Зеленые</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Крыша</p>
+                  <p>Треугольная</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="characteristics__item">
+            <button class="characteristics__title" aria-expanded="false" type="button">Из камня</button>
+            <div class="characteristics__description">
+              <ul class="characteristics__list-description">
+                <li class="characteristics__item-description">
+                  <p>Тип фундамента</p>
+                  <p>Серый</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Стены</p>
+                  <p>Зеленые</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Крыша</p>
+                  <p>Треугольная</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="characteristics__item">
+            <button class="characteristics__title" aria-expanded="false" type="button">Картонный</button>
+            <div class="characteristics__description">
+              <ul class="characteristics__list-description">
+                <li class="characteristics__item-description">
+                  <p>Тип фундамента</p>
+                  <p>Серый</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Стены</p>
+                  <p>Зеленые</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Крыша</p>
+                  <p>Треугольная</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="characteristics__item">
+            <button class="characteristics__title" aria-expanded="false" type="button">Стеклянный</button>
+            <div class="characteristics__description">
+              <ul class="characteristics__list-description">
+                <li class="characteristics__item-description">
+                  <p>Тип фундамента</p>
+                  <p>Серый</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Стены</p>
+                  <p>Зеленые</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Крыша</p>
+                  <p>Треугольная</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="characteristics__item">
+            <button class="characteristics__title" aria-expanded="false" type="button">Оловянный</button>
+            <div class="characteristics__description" id="tin">
+              <ul class="characteristics__list-description">
+                <li class="characteristics__item-description">
+                  <p>Тип фундамента</p>
+                  <p>Серый</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Стены</p>
+                  <p>Зеленые</p>
+                </li>
+                <li class="characteristics__item-description">
+                  <p>Крыша</p>
+                  <p>Треугольная</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal-order">
+    <div class="modal-order__wrapper">
+      <button class="modal-order__close" aria-label="Закрыть модальное окно">
+        <svg class="modal-order__close-svg" height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg">
+          <path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0" /></svg>
+      </button>
+
+      <form class="modal-order__form">
+        <h2 class="modal-order__title">Заполните форму</h2>
+        <fieldset class="modal-order__fieldset">
+          <legend class="visually-hidden">Форма отправки на консультацию по строительству дома</legend>
+
+          <label>
+            <input class="modal-order__input" type="text" placeholder="Ваше имя">
+          </label>
+
+          <label>
+            <input class="modal-order__input" type="text" placeholder="Ваш телефон">
+          </label>
+
+          <button class="modal-order__submit" type="submit">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <div class="alert">
+    Зуб даю сделаем все отлично!
+  </div>
+
+</body>
+
+</html>

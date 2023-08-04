@@ -182,20 +182,20 @@ document.addEventListener('DOMContentLoaded', () => {
     getAllTimerBlocks.forEach(elem => {
       elem.insertAdjacentHTML('afterbegin', `
 <p class="main__subtitle">До конца акции:</p>
-  <p class="main__text-counter">
-    <span class="main__counter main__counter--day"></span>
-    <span class="main__text main__text--day"></span>
-    <span class="main__counter main__counter--hour"></span>
-    <span class="main__text main__text--hour"></span>
-    <span class="main__counter main__counter--minute"></span>
-    <span class="main__text main__text--minute"></span>
-    <span class="main__counter main__counter--second" style="display: none"></span>
-    <span class="main__text main__text--second" style="display: none"></span>
-  </p>
+  <time class="main__text-counter" datetime="${deadline}" aria-label="Акция истекает ${deadline}">
+    <span class="main__counter main__counter--day" aria-labelledby="main__text--day"></span>
+    <span class="main__text main__text--day" id="main__text--day"></span>
+    <span class="main__counter main__counter--hour" aria-labelledby="main__text--hour"></span>
+    <span class="main__text main__text--hour" id="main__text--hour"></span>
+    <span class="main__counter main__counter--minute" aria-labelledby="main__text--minute"></span>
+    <span class="main__text main__text--minute" id="main__text--minute"></span>
+    <span class="main__counter main__counter--second" style="display: none" aria-labelledby="main__text--second"></span>
+    <span class="main__text main__text--second" style="display: none" id="main__text--second"></span>
+  </time>
       `);
     });
   }
-
-  timer('2024/02/10 14:53');
+  timer(deadline);
 });
 
+const deadline = '2024/02/10 14:53';

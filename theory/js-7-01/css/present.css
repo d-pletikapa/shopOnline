@@ -1,0 +1,86 @@
+
+.present__container {
+    padding: 124px 98px 64px;
+    box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
+    border-radius: 30px;
+    background-image: url("../img/main-house.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
+.present__title {
+    max-width: 400px;
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 400;
+    color: #0D1C41;
+    margin-bottom: 24px;
+}
+
+.present__title-city {
+    font-weight: 500;
+}
+
+.present__list {
+    margin-bottom: 45px;
+    
+}
+
+.present__item {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #939CA6;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+.present__item:before {
+    content: '';
+    background-color: #C2B59B;
+    border-radius: 10px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+}
+
+.present__btn {
+    width: 265px;
+    height: 59px;
+    border: 1px solid #C2B59B;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+
+@media (max-width: 1024px) {
+    .present__container {
+        background-image: none;
+    }
+
+    .present__content {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .present__container {
+        padding: 15% 10%;
+    }
+    
+    .present__title {
+        font-size: 28px;
+    }
+
+    .present__btn {
+        width: 100%;
+    }
+
+}
