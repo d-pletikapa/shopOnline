@@ -1,0 +1,133 @@
+/* footer */
+
+footer {
+  background-color: #2D2D2D;
+}
+
+.footer__logo {
+  height: 42px;
+  width: 190px;
+  background: url("../img/__img-footer/logo.svg") no-repeat center center;
+  grid-area: logo;
+  background-size: contain;
+  margin-right: 118px;
+  margin-bottom: 40px;
+}
+
+.footer__site-tree {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 80px;
+  padding-bottom: 25px;
+}
+
+footer * a:hover, footer * a:hover + svg {
+  color: #3670C7;
+}
+
+.footer__copyrights {
+  padding-top: 25px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+
+.copyrights__text {
+  color: var(--c-body-txt, #FFF);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.8px;
+}
+
+.copyrights__text:nth-child(1) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.copyrights__text:nth-child(2) {
+  white-space: pre;
+}
+
+.footer__header {
+  color: var(--c-body-txt, #FFF);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 41.6px;
+  margin-bottom: 40px;
+}
+
+.footer__catalogue .footer__header{
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.footer__catalogue {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 480px;
+  margin-right: 98px;
+  margin-bottom: 40px;
+  row-gap: 15px;
+}
+
+.catalogue-list__item, .faq-list__item, .contacts-list__item {
+  color: var(--c-body-txt, #FFF);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.footer__faq {
+  max-width: 253px;
+  margin-right: 181px;
+  margin-bottom: 40px;
+}
+
+.footer__contacts {
+  max-width: 280px;
+}
+
+.footer__credentials {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__faq-list {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 15px;
+}
+
+.footer__catalogue-list {
+  display: flex;
+  row-gap: 15px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.credentials__contacts-list {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 20px;
+}
+
+.credentials__link {
+  color: var(--2, #FFF);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.8px;
+  width: 100%;
+}
+
+.credentials__link:first-child {
+  margin-bottom: 21px;
+}
+
+.credentials__link:nth-child(2) {
+  margin-bottom: 36px;
+}
+

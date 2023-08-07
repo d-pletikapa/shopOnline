@@ -1,0 +1,17 @@
+:root {
+    --main-color: #c2b59b;
+    --text-size-title: 48px
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --main-color: #c2b59b;
+        --text-size-title: 42px
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --text-size-title: 36px
+    }
+}
