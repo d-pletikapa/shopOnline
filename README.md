@@ -372,3 +372,4 @@ display: none;
 
 ## JS-7-01 Accesibility
 ## JS-7-02 Gulp build
+## JS-7-03 SCSS apply (mixin variables etc...)	
