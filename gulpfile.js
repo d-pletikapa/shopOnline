@@ -2,22 +2,35 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import gulpCssimport from 'gulp-cssimport';
 import {deleteAsync} from 'del';
+import * as sassPkg from 'sass';
+import gulpSass from 'gulp-sass';
 
+
+const preProcessUse = true;
+const sass = gulpSass(sassPkg);
 //tasks
-
 export const html = () => gulp
   .src('src/*.html')
   .pipe(gulp.dest('dist'))
   .pipe(browserSync.stream());
 
-export const css = () => gulp
-  // .src('src/css/index.css')
-  .src('src/css/**/*.css')
-  .pipe(gulpCssimport({
-    extensions: ['css'],
-  }))
-  .pipe(gulp.dest('dist/css'))
-  .pipe(browserSync.stream());
+export const style = () => {
+    if (preProcessUse) {
+      return gulp
+      .src('src/scss/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(browserSync.stream());
+  } else {
+      return gulp
+      .src('src/css/**/*.css')
+      .pipe(gulpCssimport({
+        extensions: ['css'],
+      }))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(browserSync.stream());
+  }
+}
 
 export const js = () => gulp
   // .src('src/**/*.js')
@@ -44,10 +57,11 @@ export const server = () => {
     // tunnel: true,
     server: {
       baseDir: 'dist'
-    }
+    },
+    browser: ['msedge',],
   })
   gulp.watch('./src/**/*.html', html);
-  gulp.watch('./src/css/**/*.css', css);
+  gulp.watch(preProcessUse ? './src/scss/**/*.scss' : './src/css/**/*.ccss', style);
   gulp.watch('./src/js/**/*.js', js);
   gulp.watch([
     './src/fonts/**/*',
@@ -58,6 +72,6 @@ export const server = () => {
 export const clear = () => deleteAsync('dist/**/*', {force: true,});
 
 // launcher
-export const base = gulp.parallel(html, css, js, copy);
+export const base = gulp.parallel(html, style, js, copy);
 export const build = gulp.series(clear, base);
 export default gulp.series(base, server);
