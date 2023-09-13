@@ -7,8 +7,24 @@
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
-	<link rel="stylesheet" href="./css/blog.css">
-	<script type="module" src="./js/blog.js"></script>
+	<!-- <link rel="stylesheet" href="./css/blog.css"> -->
+	<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const createLink = (url) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = url;
+        document.head.append(link);
+      }
+      createLink('css/blog.css');
+    });
+  </script>
+  <script type="module">
+    import { menuInit } from './js/index.min.js';
+    import { blogInit } from './js/index.min.js';
+    menuInit();
+    blogInit();
+  </script>
 </head>
 
 <body>
@@ -16,7 +32,7 @@
 		<div class="container">
 			<nav class="header__navigation">
 				<a href="./index.html" class="header__logo" alt="Логотип компании ShopOnline"
-					aria-label="Логотип компании ShopOnline"></a>
+					aria-label="Логотип компании ShopOnline" width="190" height="54"></a>
 
 				<button class="header__menu-btn" type="button" aria-haspopup="menu">
 					<span class="header__menu-btn-wrp">
@@ -136,7 +152,7 @@
 	<footer>
     <div class="container">
     <section class="footer__site-tree">
-      <a href="./index.html" class="footer__logo" alt="Логотип компании ShopOnline" aria-label="Логотип компании ShopOnline"></a>
+      <a href="./index.html" class="footer__logo" alt="Логотип компании ShopOnline" aria-label="Логотип компании ShopOnline" width="190" height="54"></a>
       <div class="footer__catalogue">
         <h3 class="footer__header">
         Каталог

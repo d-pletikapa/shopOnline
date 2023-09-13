@@ -4,6 +4,16 @@
     max-width: calc(1770px - var(--main-offers-w-shrink-main-banner));
     min-height: calc(480px - var(--main-offers-h-shrink-main-banner));
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/__img-main/main-banner.jpg");
+    background-image: -webkit-image-set(
+      url("../img/__img-main/main-banner.avif") 1x,
+      url("../img/__img-main/main-banner.webp") 1x,
+      url("../img/__img-main/main-banner.jpg") 1x
+    );
+    background-image: image-set(
+      url("../img/__img-main/main-banner.avif") 1x,
+      url("../img/__img-main/main-banner.webp") 1x,
+      url("../img/__img-main/main-banner.jpg") 1x
+    );
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
@@ -86,6 +96,16 @@
         min-height: calc(228px - var(--main-offers-h-shrink-1x1-card));
         justify-content: flex-end;
         background: linear-gradient(181.33deg, rgba(0, 0, 0, 0) 9.23%, rgba(0, 0, 0, 0.2) 98.87%), url(../img/__img-main/card-1.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-1.avif") 1x,
+          url("../img/__img-main/card-1.webp") 1x,
+          url("../img/__img-main/card-1.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-1.avif") 1x,
+          url("../img/__img-main/card-1.webp") 1x,
+          url("../img/__img-main/card-1.jpg") 1x
+        );
         background-size: cover;
         text-align: left;
         grid-area: card--1;
@@ -108,6 +128,16 @@
         font-size: 30px;
         background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%,
             rgba(0, 0, 0, 0.2) 99.83%), url(../img/__img-main/card-2.jpg) center 100% no-repeat border-box;
+            background-image: -webkit-image-set(
+              url("../img/__img-main/card-2.avif") 1x,
+              url("../img/__img-main/card-2.webp") 1x,
+              url("../img/__img-main/card-2.jpg") 1x
+            );
+            background-image: image-set(
+              url("../img/__img-main/card-2.avif") 1x,
+              url("../img/__img-main/card-2.webp") 1x,
+              url("../img/__img-main/card-2.jpg") 1x
+            );
         background-size: cover;
         grid-area: card--2;
       }
@@ -116,6 +146,16 @@
         max-width: calc(550px - var(--main-offers-w-shrink-2x1-card));
         min-height: calc(516px - var(--main-offers-h-shrink-2x2-card));
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url(../img/__img-main/card-3.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-3.avif") 1x,
+          url("../img/__img-main/card-3.webp") 1x,
+          url("../img/__img-main/card-3.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-3.avif") 1x,
+          url("../img/__img-main/card-3.webp") 1x,
+          url("../img/__img-main/card-3.jpg") 1x
+        );
         background-size: cover;
         grid-area: card--3;
         display: flex;
@@ -129,6 +169,16 @@
         max-width: calc(550px - var(--main-offers-w-shrink-2x1-card));
         min-height: calc(228px - var(--main-offers-h-shrink-2x1-card));
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 7.46%, rgba(0, 0, 0, 0.2) 100%), url(../img/__img-main/card-4.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-4.avif") 1x,
+          url("../img/__img-main/card-4.webp") 1x,
+          url("../img/__img-main/card-4.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-4.avif") 1x,
+          url("../img/__img-main/card-4.webp") 1x,
+          url("../img/__img-main/card-4.jpg") 1x
+        );
         background-size: cover;
         grid-area: card--4;
         display: flex;
@@ -143,6 +193,16 @@
         padding-top: 20px;
         justify-content: space-between;
         background: linear-gradient(180.99deg, rgba(0, 0, 0, 0) 8.18%, rgba(0, 0, 0, 0.2) 99.15%), url(../img/__img-main/card-5.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-5.avif") 1x,
+          url("../img/__img-main/card-5.webp") 1x,
+          url("../img/__img-main/card-5.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-5.avif") 1x,
+          url("../img/__img-main/card-5.webp") 1x,
+          url("../img/__img-main/card-5.jpg") 1x
+        );
         background-size: cover;
         grid-area: card--5;
       }
@@ -151,6 +211,16 @@
         max-width: calc(550px - var(--main-offers-w-shrink-2x1-card));
         min-height: calc(228px - var(--main-offers-h-shrink-2x1-card));
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 12.28%, rgba(0, 0, 0, 0.2) 100%), url(../img/__img-main/card-6.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-6.avif") 1x,
+          url("../img/__img-main/card-6.webp") 1x,
+          url("../img/__img-main/card-6.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-6.avif") 1x,
+          url("../img/__img-main/card-6.webp") 1x,
+          url("../img/__img-main/card-6.jpg") 1x
+        );
         background-size: cover;
         grid-area: card--6;
         flex-flow: row wrap;
@@ -173,6 +243,16 @@
         max-width: calc(1160px - var(--main-offers-w-shrink-2x2-card));
         min-height: calc(516px - var(--main-offers-h-shrink-2x2-card));
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url(../img/__img-main/card-7.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-7.avif") 1x,
+          url("../img/__img-main/card-7.webp") 1x,
+          url("../img/__img-main/card-7.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-7.avif") 1x,
+          url("../img/__img-main/card-7.webp") 1x,
+          url("../img/__img-main/card-7.jpg") 1x
+        );
         background-size: cover;
         grid-area: card--7;
         display: flex;
@@ -186,6 +266,16 @@
         max-width: calc(245px - var(--main-offers-w-shrink-1x2-card));
         min-height: calc(516px - var(--main-offers-h-shrink-1x2-card));
         background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../img/__img-main/card-8.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-8.avif") 1x,
+          url("../img/__img-main/card-8.webp") 1x,
+          url("../img/__img-main/card-8.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-8.avif") 1x,
+          url("../img/__img-main/card-8.webp") 1x,
+          url("../img/__img-main/card-8.jpg") 1x
+        );
         background-size: cover;
         grid-area: card--8;
         justify-content: flex-end;
@@ -195,6 +285,16 @@
         max-width: calc(245px - var(--main-offers-w-shrink-1x1-card));
         min-height: calc(228px - var(--main-offers-h-shrink-1x1-card));
         background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../img/__img-main/card-9.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-9.avif") 1x,
+          url("../img/__img-main/card-9.webp") 1x,
+          url("../img/__img-main/card-9.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-9.avif") 1x,
+          url("../img/__img-main/card-9.webp") 1x,
+          url("../img/__img-main/card-9.jpg") 1x
+        );
         background-size: cover;
         grid-area: card--9;
         padding-left: 20px;
@@ -210,6 +310,16 @@
         max-width: calc(245px - var(--main-offers-w-shrink-1x1-card));
         min-height: calc(228px - var(--main-offers-h-shrink-1x1-card));
         background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../img/__img-main/card-10.jpg) center 100% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-10.avif") 1x,
+          url("../img/__img-main/card-10.webp") 1x,
+          url("../img/__img-main/card-10.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-10.avif") 1x,
+          url("../img/__img-main/card-10.webp") 1x,
+          url("../img/__img-main/card-10.jpg") 1x
+        );
         background-size: cover;
         grid-area: card--10;
       }
@@ -376,6 +486,11 @@
     height: 295px;
     border-radius: 14px;
 
+    picture {
+      width: 420px;
+      height: 295px;
+      border-radius: 14px;
+    }
     img {
       width: 420px;
       height: 295px;
@@ -637,6 +752,16 @@
         min-height: calc(228px - var(--main-offers-h-shrink-1x2-halfed-card));
         padding-left: 10px;
         background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../img/__img-main/card-9.jpg) center top no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-9.avif") 1x,
+          url("../img/__img-main/card-9.webp") 1x,
+          url("../img/__img-main/card-9.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-9.avif") 1x,
+          url("../img/__img-main/card-9.webp") 1x,
+          url("../img/__img-main/card-9.jpg") 1x
+        );
         background-size: cover;
 
         p {
@@ -651,6 +776,16 @@
         max-width: calc(245px - var(--main-offers-w-shrink-1x2-halfed-card));
         min-height: calc(228px - var(--main-offers-h-shrink-1x2-halfed-card));
         background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../img/__img-main/card-10.jpg) center 90% no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-10.avif") 1x,
+          url("../img/__img-main/card-10.webp") 1x,
+          url("../img/__img-main/card-10.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-10.avif") 1x,
+          url("../img/__img-main/card-10.webp") 1x,
+          url("../img/__img-main/card-10.jpg") 1x
+        );
         background-size: cover;
       }
 
@@ -699,11 +834,31 @@
       &-card--8 {
         background-size: auto;
         background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../img/__img-main/card-8.jpg) center top no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-8.avif") 1x,
+          url("../img/__img-main/card-8.webp") 1x,
+          url("../img/__img-main/card-8.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-8.avif") 1x,
+          url("../img/__img-main/card-8.webp") 1x,
+          url("../img/__img-main/card-8.jpg") 1x
+        );
         background-size: cover;
       }
 
       &-card--7 {
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url(../img/__img-main/card-7.jpg) center top no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-7.avif") 1x,
+          url("../img/__img-main/card-7.webp") 1x,
+          url("../img/__img-main/card-7.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-7.avif") 1x,
+          url("../img/__img-main/card-7.webp") 1x,
+          url("../img/__img-main/card-7.jpg") 1x
+        );
         background-size: cover;
       }
     }
@@ -827,7 +982,7 @@
       width: 280px;
       height: 197px;
 
-      img {
+      picture {
         width: 280px;
         height: 197px;
       }
@@ -919,6 +1074,16 @@
         max-width: 280px;
         min-height: 206px;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url(../img/__img-main/card-3.jpg) center center no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-3.avif") 1x,
+          url("../img/__img-main/card-3.webp") 1x,
+          url("../img/__img-main/card-3.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-3.avif") 1x,
+          url("../img/__img-main/card-3.webp") 1x,
+          url("../img/__img-main/card-3.jpg") 1x
+        );
         background-size: cover;
       }
 
@@ -935,6 +1100,16 @@
       &-card--9 {
         padding-left: 5px;
         background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), url(../img/__img-main/card-9.jpg) center top no-repeat border-box;
+        background-image: -webkit-image-set(
+          url("../img/__img-main/card-9.avif") 1x,
+          url("../img/__img-main/card-9.webp") 1x,
+          url("../img/__img-main/card-9.jpg") 1x
+        );
+        background-image: image-set(
+          url("../img/__img-main/card-9.avif") 1x,
+          url("../img/__img-main/card-9.webp") 1x,
+          url("../img/__img-main/card-9.jpg") 1x
+        );
         background-size: cover;
         padding-top: 5px;
       }

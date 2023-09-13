@@ -1,9 +1,10 @@
-@import '_var';
-@import '_normalize';
-@import '_global-style';
-@import '_container';
-@import '_header';
-@import '_footer';
+@import './components/_var';
+@import './components/_normalize';
+@import './components/_global-style';
+@import './components/_container';
+@import './components/_header';
+@import './components/_menu';
+@import './components/_footer';
 
 .blog {
 	&__main-section {
