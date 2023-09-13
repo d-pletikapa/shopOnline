@@ -11,6 +11,7 @@ $breakpoint-small: 690px;
 @mixin breakpoint-medium-large {
         @media (max-width: $breakpoint-medium-large) {
           @content;
+          
         }
       }   
 @mixin breakpoint-medium {

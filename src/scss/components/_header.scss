@@ -202,6 +202,7 @@
 
   &__profile {
     height: 57px;
+    max-width: 69px;
     display:flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -233,6 +234,7 @@
 
   &__cart {
     height: 57px;
+    max-width: 63px;
     display:flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -264,6 +266,7 @@
 
   &__favourites {
     height: 57px;
+    max-width: 82px;
     display:flex;
     flex-flow: column wrap;
     justify-content: space-between;
