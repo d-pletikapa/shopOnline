@@ -137,3 +137,12 @@ footer {
   font-weight: 400;
   line-height: 33px;
 }
+
+.contacts-list__item {
+  height: 26px;
+  a {
+    display: block;
+    width: 26px;
+    height: 26px;
+  }
+}

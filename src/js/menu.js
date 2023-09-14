@@ -3,6 +3,7 @@ export const menuInit = () => {
 const modal = document.createElement('div');
 modal.className = 'modal-menu';
 modal.classList.add('modal-menu--overlay');
+modal.style.position = 'absolute';
 modal.insertAdjacentHTML('afterbegin', `
 <nav class="modal-menu__container">
 <div class="modal-menu__section modal-menu__section--1">
@@ -51,7 +52,8 @@ modal.insertAdjacentHTML('afterbegin', `
 `);
 
 
-header.parentNode.insertBefore(modal, header.nextSibling);
+// header.parentNode.insertBefore(modal, header.nextSibling);
+document.body.appendChild(modal);
 
 const closeSvg = `
   <g clip-path="url(#clip0_1703_161)">
