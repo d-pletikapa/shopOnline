@@ -1,4 +1,4 @@
-.container {
+.container:not(:last-child) {
   margin: 0 auto 45px auto;
 
   @include breakpoint-medium-large {
