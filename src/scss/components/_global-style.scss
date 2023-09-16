@@ -5,8 +5,7 @@
     font-family: '#{$font-name}';
     font-weight: $font-weight;
     display: swap;
-    src: url("#{$font-path}.woff2") format("woff2"),
-         url("#{$font-path}.woff") format("woff");
+    src: url("#{$font-path}.woff2") format("woff2"), url("#{$font-path}.woff") format("woff");
   }
 }
 
