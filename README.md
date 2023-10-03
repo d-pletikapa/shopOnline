@@ -10,25 +10,25 @@
 
 /*.grid {
 
-  display: grid;
+  display: grid;
 
-  /* grid-template-columns: 150px 20% auto;
+  /* grid-template-columns: 150px 20% auto;
 
-  grid-template-rows: 150px 150px;
+  grid-template-rows: 150px 150px;
 
   
 
-  grid-auto-flow: column;
+  grid-auto-flow: column;
 
-  grid-auto-rows: 100px;
+  grid-auto-rows: 100px;
 
-  grid-auto-columns: 50px; */
+  grid-auto-columns: 50px; */
 
   
 
 /* grid-template-columns: 1fr 1fr 1fr;
 
-  grid-template-rows: 1fr 1fr 100px; */
+  grid-template-rows: 1fr 1fr 100px; */
 
   
 
@@ -52,9 +52,9 @@
 
   
 
-/* grid-template-columns: repeat(2, 1fr 2fr); повторить каждые 2 - паттерн  */
+/* grid-template-columns: repeat(2, 1fr 2fr); повторить каждые 2 - паттерн  */
 
-/* grid-template-columns: repeat(2, 1fr 50px) 50%; повторить каждые 2 - паттерн + последняя  */
+/* grid-template-columns: repeat(2, 1fr 50px) 50%; повторить каждые 2 - паттерн + последняя  */
 
 /* grid-template-columns: repeat(auto-fit, 165px); повторить в ряд равномерно если вмещаются, все что не вмещается переносится на след ряд */
 
@@ -64,15 +64,15 @@
 
 /* grid-template-columns: repeat(3, 200px);
 
-  grid-template-rows: repeat(6, 75px);
+  grid-template-rows: repeat(6, 75px);
 
-  gap: 15px;
+  gap: 15px;
 
-  height: 600px; */
+  height: 600px; */
 
 /* justify-items: center;
 
-    align-items: end; */
+    align-items: end; */
 
 /* place-items: center end; */
 
@@ -90,17 +90,17 @@ align-content: evenly;
 
 /* .grid__item:nth-child(8) {
 
-  color: red;
+  color: red;
 
-  font-weight: 700;
+  font-weight: 700;
 
-  /*
+  /*
 
-  align-self: center;
+  align-self: center;
 
-  justify-self: start;
+  justify-self: start;
 
-  place-self: center start;
+  place-self: center start;
 
 }*/
 
@@ -108,17 +108,17 @@ align-content: evenly;
 
 .grid__item:nth-child(3) {
 
-  color: yellowgreen;
+  color: yellowgreen;
 
-  font-weight: 700;
+  font-weight: 700;
 
-  grid-column-start: 2;
+  grid-column-start: 2;
 
-  grid-column-end: 3;
+  grid-column-end: 3;
 
-  grid-row-start: 2;
+  grid-row-start: 2;
 
-  grid-row-end: 3;
+  grid-row-end: 3;
 
 grid-column: 2 / 3;
 
@@ -136,9 +136,9 @@ z-index: 5;
 
 /* .grid__item:nth-child(1) {
 
-  grid-column: 1 / 3;
+  grid-column: 1 / 3;
 
-  grid-row: 1/3;
+  grid-row: 1/3;
 
 }
 
@@ -146,9 +146,9 @@ z-index: 5;
 
 .grid__item:nth-child(1) {
 
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 2;
 
-  grid-row: 1/ span 2;
+  grid-row: 1/ span 2;
 
 }
 
@@ -156,9 +156,9 @@ z-index: 5;
 
 .grid__item:nth-child(13) {
 
-  grid-column: 1 / 3;
+  grid-column: 1 / 3;
 
-  grid-row: 3/5;
+  grid-row: 3/5;
 
 }
 
@@ -174,21 +174,21 @@ z-index: 5;
 
 .grid {
 
-  display: grid;
+  display: grid;
 
-  grid-template-columns: [start menus-s] 1fr [menu-e center-s] 4fr 1fr [end];
+  grid-template-columns: [start menus-s] 1fr [menu-e center-s] 4fr 1fr [end];
 
-  grid-template-rows: [header-s] 1fr [header-e] 4fr [footer-s] 1fr [footer-e];
+  grid-template-rows: [header-s] 1fr [header-e] 4fr [footer-s] 1fr [footer-e];
 
-  /* gap: 15px; */
+  /* gap: 15px; */
 
-  grid-template-areas:
+  grid-template-areas:
 
-    "header header header"
+    "header header header"
 
-    "menu main main"
+    "menu main main"
 
-    "footer footer footer";
+    "footer footer footer";
 
 }
 
@@ -196,21 +196,21 @@ z-index: 5;
 
 .grid__item:nth-child(1) {
 
-  color: red;
+  color: red;
 
-  font-weight: 700;
+  font-weight: 700;
 
-  /* grid-column: 1 / 4; */
+  /* grid-column: 1 / 4; */
 
-  /* --- */
+  /* --- */
 
-  /* grid-column: start /end;
+  /* grid-column: start /end;
 
-  grid-row: header-s / header-e; */
+  grid-row: header-s / header-e; */
 
-  /* --- */
+  /* --- */
 
-  grid-area: header;
+  grid-area: header;
 
 }
 
@@ -218,23 +218,23 @@ z-index: 5;
 
 .grid__item:nth-child(2) {
 
-  color: red;
+  color: red;
 
-  font-weight: 700;
+  font-weight: 700;
 
-  /* grid-column: 2 /4;
+  /* grid-column: 2 /4;
 
-  grid-row: 2 / 3; */
+  grid-row: 2 / 3; */
 
-  /* --- */
+  /* --- */
 
-  /* grid-column: menus-s / menu-e;
+  /* grid-column: menus-s / menu-e;
 
-  grid-row: header-e / footer-s; */
+  grid-row: header-e / footer-s; */
 
-  /* --- */
+  /* --- */
 
-  grid-area: menu;
+  grid-area: menu;
 
   
 
@@ -244,21 +244,21 @@ z-index: 5;
 
 .grid__item:nth-child(3) {
 
-  color: red;
+  color: red;
 
-  font-weight: 700;
+  font-weight: 700;
 
-  /* grid-column: 1 /4; */
+  /* grid-column: 1 /4; */
 
-  /* --- */
+  /* --- */
 
-  /* grid-column: center-s / end;
+  /* grid-column: center-s / end;
 
-  grid-row: header-e / footer-s; */
+  grid-row: header-e / footer-s; */
 
-  /* --- */
+  /* --- */
 
-  grid-area: main;
+  grid-area: main;
 
 }
 
@@ -266,21 +266,21 @@ z-index: 5;
 
 .grid__item:nth-child(4) {
 
-  color: red;
+  color: red;
 
-  font-weight: 700;
+  font-weight: 700;
 
-  /* grid-column: 1 /4; */
+  /* grid-column: 1 /4; */
 
-  /* --- */
+  /* --- */
 
-  /* grid-column: start / end;
+  /* grid-column: start / end;
 
-  grid-row: footer-s / footer-e; */
+  grid-row: footer-s / footer-e; */
 
-  /* --- */
+  /* --- */
 
-  grid-area: footer;
+  grid-area: footer;
 
 }
 
@@ -316,7 +316,7 @@ background-color: green;
 
   
 
-@media (max-width:450px)   {
+@media (max-width:450px)   {
 
 body {
 
@@ -328,7 +328,7 @@ display: none;
 
   
 
-@media /* Variants */ print screen all /* Variants */  {
+@media /* Variants */ print screen all /* Variants */  {
 
 body {
 
@@ -372,3 +372,6 @@ display: none;
 
 ## JS-7-01 Accesibility
 ## JS-7-02 Gulp build
+## JS-7-03 SCSS apply (mixin variables etc...)	
+## JS-7-04 menu added image optimizations, critical styles...	
+## JS-7-05 add autoprefixer support and babel polyfill support	
