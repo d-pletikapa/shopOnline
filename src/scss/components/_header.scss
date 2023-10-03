@@ -1,0 +1,300 @@
+.header {
+  &__navigation {
+    display: grid;
+    max-width: var(--max-width-section);
+    padding: var(--padding-header);
+    margin: 0 auto;
+    grid-template-columns: 190px 2fr auto 7fr auto 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-content: space-between;
+    justify-items: center;
+    grid-template-areas:
+    "logo menu-btn . search-form . profile-btn cart-btn fav-btn";
+    @include breakpoint-medium-large  {
+      grid-template-columns: 190px 104px 104px 104px auto 104px 104px 122px;
+      grid-template-rows: 1fr;
+      align-content: space-between;
+      justify-items: center;
+      row-gap: 34px;
+      grid-template-areas:
+      "logo . . . . profile-btn cart-btn fav-btn"
+      "menu-btn search-form search-form search-form search-form search-form search-form search-form";
+    }
+    @include breakpoint-medium {
+      grid-template-columns: 165px 73px 73px auto 73px 73px 73px 92px;
+      grid-template-rows: 1fr;
+      align-content: space-between;
+      justify-items: center;
+      row-gap: 29px;
+      grid-template-areas:
+      "logo . . . . profile-btn cart-btn fav-btn"
+      "menu-btn search-form search-form search-form search-form search-form search-form search-form";
+    }
+    @include breakpoint-small {
+      grid-template-columns: 114px auto 40px 40px 40px;
+      grid-template-rows: 3fr;
+      align-content: space-between;
+      justify-items: center;
+      row-gap: 20px;
+      grid-template-areas:
+      "logo . . . ."
+      "menu-btn . profile-btn cart-btn fav-btn"
+      "search-form search-form search-form search-form search-form";
+    }
+  }
+  
+  &__logo {
+    height: 54px;
+    width: 190px;
+    background: url("../img/__img-header/logo.svg") no-repeat center center;
+    grid-area: logo;
+    background-size: contain;
+    @include breakpoint-medium {
+        height: 35px;
+        width: 165px;
+    }
+    @include breakpoint-small {
+      height: 25px;
+      width: 114px;
+    }
+  }
+
+  &__menu-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 151px;
+    height: 54px;
+    background-color: #3670C7;
+    border-radius: 10px;
+    color: var(--c-body-txt);
+    font-weight: 400;
+    font-size: 22px;
+    grid-area: menu-btn;
+    & svg {
+      margin-right: 7px;
+      @include breakpoint-medium {
+        margin-right: 4px;
+      }
+      @include breakpoint-small {
+        margin-right: 3px;
+      }
+    }
+    & span {
+      vertical-align: 5px;
+    }
+    @include breakpoint-medium-large  {
+      justify-self: flex-start;
+    }
+    @include breakpoint-medium {
+      width: 115px;
+      height: 42px; 
+    }
+    @include breakpoint-small {
+      width: 79px;
+      height: 30px;
+      justify-self: flex-start;
+    }
+  }
+
+  &__menu-btn-wrp {
+    padding-top: 5px;
+    & span {
+      @include breakpoint-medium {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      @include breakpoint-small {
+        font-size: 12px;
+        line-height: 18px;
+        vertical-align: 7px;
+      }
+    }
+    & svg {
+      @include breakpoint-small {
+        width: 14px;
+      }
+    }
+  }
+
+  &__search-form {
+    max-width: var(--search-form-width);
+    height: 54px;
+    display: grid;
+    grid-template-columns: minmax(auto, calc(var(--search-form-width) - var(--search-btn-width)))  var(--search-btn-width);
+    grid-template-rows: 54px;
+    grid-area: search-form;
+    @include breakpoint-medium-large  {
+      justify-self: flex-end;
+    }
+    @include breakpoint-medium {
+      height: 42px;
+    }
+    @include breakpoint-small {
+      height: 30px;
+      justify-self: center;
+    }
+  }
+
+  &__search-input {
+    max-width: var(--search-form-width);
+    height: 54px;
+    background-color: #EFEFEF;
+    border-radius: 30px;
+    color: #8F8F8F;
+    font-weight: 700;
+    font-size: 16px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    padding: 15px 0 18px 40px;
+    @include breakpoint-medium {
+      height: 42px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    @include breakpoint-small {
+      height: 30px;
+    }
+  }
+
+  &__search-btn {
+    width: var(--search-btn-width);
+    height: var(--search-btn-height);
+    background-color: #3670C7;
+    border-radius: 30px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding-top: 5px;
+    & svg {
+      @include breakpoint-medium {
+        width: 30px;
+        height: 30px;
+      }
+      @include breakpoint-small {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    @include breakpoint-medium {
+      height: var(--search-btn-height);
+      padding-top: 4px;
+    }
+    @include breakpoint-small {
+      height: var(--search-btn-height);
+    }
+    @include breakpoint-small {
+      padding-top: 3px;
+    }
+  }
+
+  &__right-btn-txt {
+    font-size: 16px;
+    line-height: 21px;    
+    @include breakpoint-medium {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    @include breakpoint-small {
+      display: none;
+    }
+  }
+
+  &__profile {
+    height: 57px;
+    max-width: 69px;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: profile-btn;
+    background-color: transparent;
+    justify-self: flex-end;
+    & svg {
+      width: 36px;
+      height: 36px;
+      @include breakpoint-medium {
+        height: 30px;
+      }
+      @include breakpoint-small {
+        height: 30px;
+      }  
+    }
+    @include breakpoint-medium-large  {
+        justify-self: flex-end;
+    }
+    @include breakpoint-medium {
+      height: 46px;
+    }
+    @include breakpoint-small {
+      height: 30px;
+      justify-self: flex-start;
+    }
+  }
+
+  &__cart {
+    height: 57px;
+    max-width: 63px;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: cart-btn;
+    background-color: transparent;
+    justify-self: flex-end;
+    & svg {
+      width: 36px;
+      height: 36px;
+      @include breakpoint-medium {
+        height: 30px;
+      }
+      @include breakpoint-small {
+        height: 25px;
+      }
+    }
+    @include breakpoint-medium-large  {
+        justify-self: flex-end;
+    }
+    @include breakpoint-medium {
+      height: 46px;
+    }
+    @include breakpoint-small {
+      height: 30px;
+      justify-self: center;
+    }
+  }
+
+  &__favourites {
+    height: 57px;
+    max-width: 82px;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: fav-btn;
+    background-color: transparent;
+    justify-self: flex-end;
+    & svg {
+      width: 36px;
+      height: 36px;
+      @include breakpoint-medium {
+        height: 30px;
+      }
+      @include breakpoint-small {
+        height: 25px;
+      }
+    }
+    @include breakpoint-medium-large  {
+        justify-self: flex-end;
+    }
+    @include breakpoint-medium {
+      height: 46px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    @include breakpoint-small {
+      height: 30px;
+      justify-self: flex-end;
+    }   
+  }
+}
