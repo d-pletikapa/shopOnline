@@ -1,0 +1,44 @@
+@import './components/_var';
+@import './components/_normalize';
+@import './components/_global-style';
+@import './components/_container';
+@import './components/_header';
+@import './components/_menu';
+@import './components/_footer';
+
+.product {
+	&__main-section {
+		padding-top: 30px;
+		padding-bottom: 50px;
+		display: flex;
+		flex-flow: row wrap;
+		max-width: 1533px;
+		margin: auto;
+		gap: 50px 0;
+		justify-content: space-between;
+	}
+}
+
+.main__breadcrumbs {
+	& p {
+
+		>a,
+		>svg {
+			margin-right: 10px;
+		}
+
+		>a:hover {
+			color: #3670C7;
+		}
+
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #525252;
+	}
+
+	&-section {
+		padding-top: 15px;
+		padding-bottom: 50px;
+	}
+}
