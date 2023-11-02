@@ -3,10 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Article-01</title>
-	<!-- <link rel="stylesheet" href="./css/article.css"> -->
+	<title>Product</title>
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" href="./css/product.css"> -->
 	<script>
     document.addEventListener('DOMContentLoaded', () => {
       const createLink = (url) => {
@@ -15,23 +16,21 @@
         link.href = url;
         document.head.append(link);
       }
-      createLink('css/article.css');
+      createLink('css/product.css');
     });
   </script>
-	  <script type="module">
-			import { menuInit } from './js/index.min.js';
-			import { articleInit } from './js/index.min.js';
-			menuInit();
-			articleInit();
-		</script>
+  <script type="module">
+    import { menuInit } from './js/index.min.js';
+    menuInit();
+  </script>
 </head>
 
 <body>
-
 	<header class="header">
 		<div class="container">
 			<nav class="header__navigation">
-				<a href="./index.html" class="header__logo" alt="Логотип компании ShopOnline" aria-label="Логотип компании ShopOnline"></a>
+				<a href="./index.html" class="header__logo" alt="Логотип компании ShopOnline"
+					aria-label="Логотип компании ShopOnline" width="190" height="54"></a>
 
 				<button class="header__menu-btn" type="button" aria-haspopup="menu">
 					<span class="header__menu-btn-wrp">
@@ -78,101 +77,41 @@
 		</div>
 	</header>
 
-	<main class="article__main">
+	<main class="product__main">
+
+		<section class="main__breadcrumbs-section">
+			<nav class="main__breadcrumbs">
+				<p>
+					<a href="./index.html">Главная</a>
+					<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
+							fill="#525252" />
+					</svg>
+          <a href="./index.html">Каталог</a>
+					<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
+							fill="#525252" />
+					</svg>
+          <a href="./index.html">Главная</a>
+					<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
+							fill="#525252" />
+					</svg>
+					<a href="#">ASUS</a>
+				</p>
+			</nav>
+		</section>
+
 		<div class="container">
-
-			<section class="main__breadcrumbs-section">
-				<nav class="main__breadcrumbs">
-					<p>
-						<a href="./index.html">Главная</a>
-						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
-								fill="#525252" />
-						</svg>
-
-						<a href="./blog.html">Блог</a>
-						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
-								fill="#525252" />
-						</svg>
-
-						<a class="article__link" href=""></a>
-					</p>
-				</nav>
-			</section>
-
-			<section class="main__section">
-				<article class="article">
-					<section class="article__section">
-						<h1 class="article__title"></h1>
-						<p class="article__paragraph"></p>
-						<div class="article__footer">
-							<a class="footer__back-link" href="blog.html"><svg width="18" height="21" viewBox="0 0 18 12"
-									fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path d="M18 5H3.83L7.41 1.41L6 0L0 6L6 12L7.41 10.59L3.83 7H18V5Z" fill="" />
-								</svg><span>К списку статей</span></a>
-							<div class="footer__author-data">
-								<p class="article__author-credentials"></p>
-								<p class="arctile__creation-date">22 октября 2021, 12:45
-								</p>
-								<div class="article__counter">
-									<svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M20.2565 6.962C20.7305 7.582 20.7305 8.419 20.2565 9.038C18.7635 10.987 15.1815 15 10.9995 15C6.81752 15 3.23552 10.987 1.74252 9.038C1.51191 8.74113 1.38672 8.37592 1.38672 8C1.38672 7.62408 1.51191 7.25887 1.74252 6.962C3.23552 5.013 6.81752 1 10.9995 1C15.1815 1 18.7635 5.013 20.2565 6.962V6.962Z"
-											stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-										<path
-											d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
-											stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-									<span class="counter__views-text">0.6K</span>
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"
-											fill="#8F8F8F" />
-									</svg>
-	
-									<span class="counter__commetns-text">0</span>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section class="article__ads">
-						<div class="ads__card">
-							<picture>
-								<source srcset="./img/__img-article/1.avif" type="image/avif">
-								<source srcset="./img/__img-article/1.webp" type="image/webp">
-								<img src="./img/__img-article/1.jpg" alt="Горящие туры в Стамбул" style="width:532; height:328;">	
-							</picture>
-						<div class="ads__text-wrapper">
-								<h2>Горящие туры в Стамбул
-									от 20 000 руб.</h2>
-								<p>Окунись в настоящую восточную сказку</p>
-							</div>
-						</div>
-						<div class="ads__card">
-							<picture>
-								<source srcset="./img/__img-article/2.avif" type="image/avif">
-								<source srcset="./img/__img-article/2.webp" type="image/webp">
-								<img src="./img/__img-article/2.jpg" alt="Новый RENAULT DUSTER" style="width:532; height:328;">
-							</picture>
-							<div class="ads__text-wrapper">
-								<h2>Новый RENAULT DUSTER</h2>
-								<p>Легендарный внедорожник в новом дизайне</p>
-							</div>
-						</div>
-					</section>
-	
-				</article>
-			</section>
-
-		</div>
-		</div>
+		<section class="product__main-section">
+		</section>
+  </div>
 	</main>
 
 	<footer>
     <div class="container">
     <section class="footer__site-tree">
-      <a href="./index.html" class="footer__logo" alt="Логотип компании ShopOnline" aria-label="Логотип компании ShopOnline"></a>
+      <a href="./index.html" class="footer__logo" alt="Логотип компании ShopOnline" aria-label="Логотип компании ShopOnline" width="190" height="54"></a>
       <div class="footer__catalogue">
         <h3 class="footer__header">
         Каталог

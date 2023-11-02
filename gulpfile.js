@@ -70,11 +70,11 @@ export const style = () => {
 export const js = () => gulp
   .src([...allJsLibs, 'src/js/**/*.js'], { allowEmpty: true })
   .pipe(gulpif(dev, sourcemaps.init()))
-  .pipe(babel({
-    presets: ['@babel/preset-env'],
-    ignore: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js'],
-    // exclude: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js']
-  }))
+  // .pipe(babel({
+  //   presets: ['@babel/preset-env'],
+  //   ignore: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js'],
+  //   // exclude: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js']
+  // }))
   .pipe(terser())
   .pipe(concat('index.min.js'))
   .pipe(gulpif(dev, sourcemaps.write('../maps')))
