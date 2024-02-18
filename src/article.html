@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Article-01</title>
 	<!-- <link rel="stylesheet" href="./css/article.css"> -->
+	<script defer src="./js/index.min.js"></script>
 	<script>
     document.addEventListener('DOMContentLoaded', () => {
       const createLink = (url) => {
@@ -16,14 +17,10 @@
         document.head.append(link);
       }
       createLink('css/article.css');
-    });
-  </script>
-	  <script type="module">
-			import { menuInit } from './js/index.min.js';
-			import { articleInit } from './js/index.min.js';
 			menuInit();
 			articleInit();
-		</script>
+    });
+  </script>
 </head>
 
 <body>

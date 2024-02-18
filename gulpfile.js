@@ -70,11 +70,11 @@ export const style = () => {
 export const js = () => gulp
   .src([...allJsLibs, 'src/js/**/*.js'], { allowEmpty: true })
   .pipe(gulpif(dev, sourcemaps.init()))
-  // .pipe(babel({
-  //   presets: ['@babel/preset-env'],
-  //   ignore: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js'],
-  //   // exclude: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js']
-  // }))
+  .pipe(babel({
+    presets: ['@babel/preset-env'],
+    ignore: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js'],
+    // exclude: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js']
+  }))
   .pipe(terser())
   .pipe(concat('index.min.js'))
   .pipe(gulpif(dev, sourcemaps.write('../maps')))
@@ -111,7 +111,7 @@ export const webp = () => gulp
 export const avif = () => gulp
   .src('src/img/**/*.{jpg,jpeg,png}')
   .pipe(gulpAvif({
-    quality: 60,
+    quality: 65,
   }))
   .pipe(gulp.dest('dist/img'))
   .pipe(browserSync.stream({
