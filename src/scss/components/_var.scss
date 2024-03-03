@@ -29,6 +29,7 @@ $breakpoint-small: 690px;
     --c-body-txt: #FFFFFF;
     --c-body-bg: #FFFFFF;
     --c-body-border-outline: transparent;
+    --fz-additional-info: 16px;
 
     --max-width-section: 1920px;
     --padding-section: 9px 75px 45px 75px;
@@ -158,5 +159,6 @@ $breakpoint-small: 690px;
             --main-offers-h-shrink-1x2-card: 321px;
             --main-offers-w-shrink-1x2-halfed-card: 115px;
             --main-offers-h-shrink-1x2-halfed-card: 133px;
+            --fz-additional-info: 12px;
     }
 }
