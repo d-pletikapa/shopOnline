@@ -1,0 +1,46 @@
+@import './components/_var';
+@import './components/_normalize';
+@import './components/_global-style';
+@import './components/_container';
+@import './components/_header';
+@import './components/_menu';
+@import './components/_footer';
+
+.main__breadcrumbs {
+	& p {
+
+		>a,
+		>svg {
+			margin-right: 10px;
+		}
+
+		>a:hover {
+			color: #3670C7;
+		}
+
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #525252;
+	}
+
+	&-section {
+		padding-top: 60px;
+		padding-bottom: 50px;
+
+		@include breakpoint-medium-large {
+			padding-top: 40px;
+			padding-bottom: 30px;
+		}
+
+		@include breakpoint-medium {
+			padding-top: 30px;
+			padding-bottom: 25px;
+		}
+
+		@include breakpoint-small {
+			padding-top: 16px;
+			padding-bottom: 15px;
+		}
+	}
+}

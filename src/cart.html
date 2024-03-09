@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Product</title>
+  <title>Cart</title>
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
@@ -17,7 +17,7 @@
         link.href = url;
         document.head.append(link);
       }
-      createLink('css/product.css');
+      createLink('css/cart.css');
       menuInit();
     });
   </script>
@@ -56,7 +56,8 @@
             <path
               d="M18 18C21.315 18 24 15.315 24 12C24 8.685 21.315 6 18 6C14.685 6 12 8.685 12 12C12 15.315 14.685 18 18 18ZM18 21C13.995 21 6 23.01 6 27V30H30V27C30 23.01 22.005 21 18 21Z"
               fill="#2D2D2D" />
-          </svg><span class="header__right-btn-txt">Профиль</span></button>
+          </svg><span class="header__right-btn-txt">Профиль</span>
+        </button>
         <button class="header__cart" type="button"><svg width="31" height="30" viewBox="0 0 31 30" fill="none"
             xmlns="http://www.w3.org/2000/svg" onclick="window.location.href='./cart.html'" aria-label="button links to a cart page">
             <path
@@ -70,7 +71,8 @@
             <path
               d="M18 32.025L15.825 30.045C8.1 23.04 3 18.42 3 12.75C3 8.13 6.63 4.5 11.25 4.5C13.86 4.5 16.365 5.715 18 7.635C19.635 5.715 22.14 4.5 24.75 4.5C29.37 4.5 33 8.13 33 12.75C33 18.42 27.9 23.04 20.175 30.06L18 32.025Z"
               fill="#2D2D2D" />
-          </svg><span class="header__right-btn-txt">Избранное</span></button>
+          </svg><span class="header__right-btn-txt">Избранное</span>
+        </button>
 
       </nav>
     </div>
@@ -86,136 +88,24 @@
             <path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
               fill="#525252" />
           </svg>
-          <a href="./index.html">Каталог</a>
+          <a href="./cart.html">Корзина</a>
           <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
               fill="#525252" />
           </svg>
-          <a href="./index.html">Главная</a>
-          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
-              fill="#525252" />
-          </svg>
-          <a href="#">ASUS</a>
         </p>
       </nav>
     </section>
 
-    <div class="container">
-      <section class="product__main-section">
-        <h1 class="product__title">15.6" Игровой ноутбук ASUS G513IE-HN004T</h1>
-        <div class="product__card">
-          <div class="product__img-wrapper">
-            <div class="product__img-label">-15%</div>
-            <picture class="product__img">
-              <source srcset="./img/__img-product/f3209b43a18a3f919281c0fea2c92afb.avif" type="image/avif">
-              <source srcset="./img/__img-product/f3209b43a18a3f919281c0fea2c92afb.webp" type="image/webp">
-              <img src="./img/__img-product/f3209b43a18a3f919281c0fea2c92afb.png"
-                alt="Игровой ноутбук ASUS G513IE-HN004T 15.6">
-            </picture>
-          </div>
-          <div class="product__add-to-card">
-            <div class="add-to-card__price">
-              <p class="price__after-disc">109 090 ₽</p>
-              <p class="price__before-disc">140 590 ₽</p>
-            </div>
-            <p class="add-to-card__credit">В кредит от 5600 ₽</p>
-            <div class="add-to-card__btns">
-              <button class="add-to-card__action-btn" type="button">Добавить в корзину</button>
-              <button class="add-to-card__like-btn" type="button"></button>
-            </div>
-            <div class="add-to-card__additional-info">
-              <p class="additional-info__delivery">
-                <span class="delivery__title">Доставка</span>
-                <span class="delivery__date-range">1-3 января</span>
-              </p>
-              <p class="additional-info__seller">
-                <span class="seller__title">Продавец</span>
-                <span class="seller__name">ShopOnline</span>
-              </p>
-            </div>
-            <div class="add-to-card__subscribe">
-              <button class="subscribe__btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M19 13.586V10C19 6.783 16.815 4.073 13.855 3.258C13.562 2.52 12.846 2 12 2C11.154 2 10.438 2.52 10.145 3.258C7.185 4.074 5 6.783 5 10V13.586L3.293 15.293C3.19996 15.3857 3.12617 15.4959 3.07589 15.6172C3.0256 15.7386 2.99981 15.8687 3 16V18C3 18.2652 3.10536 18.5196 3.29289 18.7071C3.48043 18.8946 3.73478 19 4 19H20C20.2652 19 20.5196 18.8946 20.7071 18.7071C20.8946 18.5196 21 18.2652 21 18V16C21.0002 15.8687 20.9744 15.7386 20.9241 15.6172C20.8738 15.4959 20.8 15.3857 20.707 15.293L19 13.586ZM19 17H5V16.414L6.707 14.707C6.80004 14.6143 6.87383 14.5041 6.92412 14.3828C6.9744 14.2614 7.00019 14.1313 7 14V10C7 7.243 9.243 5 12 5C14.757 5 17 7.243 17 10V14C17 14.266 17.105 14.52 17.293 14.707L19 16.414V17ZM12 22C12.6193 22.0008 13.2235 21.8086 13.7285 21.4502C14.2335 21.0917 14.6143 20.5849 14.818 20H9.182C9.38566 20.5849 9.76648 21.0917 10.2715 21.4502C10.7765 21.8086 11.3807 22.0008 12 22Z"
-                    fill="#3670C7" />
-                </svg>
-                Узнать о снижении цены</button>
-            </div>
-          </div>
-          <div class="add-to-card__description">
-            <p class="description__title">Описание:</p>
-            <p class="description__text">ROG Strix G15/17 – это игровая платформа для массового пользователя, работающая
-              на базе операционной
-              системы Windows 10 Pro. Благодаря мощной конфигурации, которая может включать в себя процессор AMD Ryzen
-              9
-              5900HX и видеокарту GeForce RTX 3070, этот ноутбук подходит для широкого спектра задач. Его дисплей
-              доступен в двух вариантах: с киберспортивного уровня частотой обновления в 300 Гц или с высоким
-              разрешением WQHD. Оба варианта обладают низким временем отклика (3 мс) и поддерживают адаптивную
-              синхронизацию Adaptive-Sync. Оптимизированная система охлаждения гарантирует стабильную работу
-              устройства
-              под тяжелыми нагрузками, поэтому ROG Strix G15/17 позволит вам проявить все свое мастерство в любой
-              игровой ситуации!
-            </p>
-          </div>
-        </div>
+    <div class="container cart">
+      <section class="cart__list-section">
+        <h1 class="list-section__title">Корзина</h1>
       </section>
-      <section class="product__suggestions-section">
-        <h2 class="suggestions-section__title">Рекомендуем также</h2>
-        <div class="suggestions-section__carousel">
-
-          <div class="carousel__minicard">
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_1.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_1.webp" type="image/webp">
-              <img src="./img/__minicard/photo_1.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">96 320 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук Dell</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_2.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_2.webp" type="image/webp">
-              <img src="./img/__minicard/photo_2.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">64 949 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук HP 250</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_3.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_3.webp" type="image/webp">
-              <img src="./img/__minicard/photo_3.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">37 980 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук HP 15</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <div class="minicard__img-label">-10%</div>
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_4.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_4.webp" type="image/webp">
-              <img src="./img/__minicard/photo_4.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">102 680 ₽</p>
-              <p class="minicard__price minicard__price--before">105 999 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук ASUS ZenBook Pro</p>
-          </div>
-
-        </div>
+      <section class="cart__delivery-section">
+        <h2 class="delivery-section__title">Способ доставки</h2>
+      </section>
+      <section class="cart__finalize-purchase-section">
+        <h3 class="finalize-section__title">Итого</h3>
       </section>
     </div>
   </main>
