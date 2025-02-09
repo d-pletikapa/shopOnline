@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41983231-21cf-449e-a5eb-6466a5a0eda0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/dist/css/article.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/article.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-article/1.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-article/1.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-article/2.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-article/2.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/1.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/1.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/10.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/10.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/11.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/11.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/12.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/12.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/2.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/2.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/3.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/3.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/4.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/4.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/5.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/5.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/6.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/6.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/7.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/7.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/8.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/8.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-blog/9.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-blog/9.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-1.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-1.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-10.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-10.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-2.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-2.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-3.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-3.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-4.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-4.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-5.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-5.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-6.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-6.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-7.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-7.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-8.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-8.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/card-9.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/card-9.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/main-banner.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/main-banner.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/product-1.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/product-1.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/product-2.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/product-2.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/product-3.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/product-3.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/product-4.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/product-4.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/product-5.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/product-5.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/product-6.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/product-6.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/product-7.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/product-7.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-main/product-8.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-main/product-8.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__img-product/f3209b43a18a3f919281c0fea2c92afb.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__img-product/f3209b43a18a3f919281c0fea2c92afb.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__minicard/photo_1.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__minicard/photo_1.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__minicard/photo_2.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__minicard/photo_2.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__minicard/photo_3.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__minicard/photo_3.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/__minicard/photo_4.avif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/__minicard/photo_4.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/index.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/maps/article.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/maps/article.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/maps/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/maps/blog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/maps/cart.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/maps/cart.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/maps/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/maps/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/maps/index.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/maps/index.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/maps/product.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/maps/product.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/article.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/cart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_container.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_container.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/product.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/product.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;d-pletikapa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/d-pletikapa/shopOnline.git&quot;,
+    &quot;accountId&quot;: &quot;ae09adae-f241-40c9-ae5c-6c67638854ed&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2r8fBzlAT4NBUte9Ni6ngnbk0CV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/FTP/dir/Method_Frontend_P2W/shopOnline/node_modules/tempy/node_modules/temp-dir/index.js",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.120" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41983231-21cf-449e-a5eb-6466a5a0eda0" name="Changes" comment="" />
+      <created>1735945490459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735945490459</updated>
+      <workItem from="1735945491597" duration="5593000" />
+      <workItem from="1737357335403" duration="648000" />
+      <workItem from="1737358055256" duration="52000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

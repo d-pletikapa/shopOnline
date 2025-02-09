@@ -1,21 +1,23 @@
+@use "var";
+
 .container:not(:last-child) {
   margin: 0 auto 45px auto;
 
-  @include breakpoint-medium-large {
+  @include var.breakpoint-medium-large {
     margin: 0 auto 30px auto;
     .main & {
       margin-bottom: 45px;
     }
   }
 
-  @include breakpoint-medium {
+  @include var.breakpoint-medium {
     margin: 0 auto 25px auto;
     .main & {
       margin-bottom: 35px;
     }
   }
 
-  @include breakpoint-small {
+  @include var.breakpoint-small {
     margin: 0 auto 21px auto;
     .main & {
       margin-bottom: 23px;

@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import gulpCssimport from 'gulp-cssimport';
 import { deleteAsync } from 'del';
-import * as sassPkg from 'sass';
+import * as sass from 'sass';  // Updated import syntax
 import gulpSass from 'gulp-sass';
 import htmlmin from 'gulp-htmlmin';
 import cleanCSS from 'gulp-clean-css';
@@ -16,20 +16,17 @@ import { stream as critical } from 'critical';
 import gulpif from 'gulp-if';
 import autoPrefixer from 'gulp-autoprefixer';
 import babel from 'gulp-babel';
+import gulpFilter from 'gulp-filter';
 
 const preProcessUse = true;
 let dev = false;
-const sass = gulpSass(sassPkg);
-const allJsLibs = [
-  'src/libs/jquery-3.7.0.min.js',
-];
-//tasks
+const sassCompiler = gulpSass(sass);  // This stays the same
+const allJsLibs = ['src/libs/jquery-3.7.0.min.js'];
+
+// Tasks
 export const html = () => gulp
   .src('src/*.html')
-  .pipe(htmlmin({
-    removeComments: true,
-    collapseWhitespace: true,
-  }))
+  .pipe(htmlmin({ removeComments: true, collapseWhitespace: true }))
   .pipe(gulp.dest('dist'))
   .pipe(browserSync.stream());
 
@@ -38,43 +35,28 @@ export const style = () => {
     return gulp
       .src('src/scss/**/*.scss')
       .pipe(gulpif(dev, sourcemaps.init()))
-      .pipe(sass().on('error', sass.logError))
+      .pipe(sassCompiler().on('error', sassCompiler.logError))  // Updated sass usage
       .pipe(autoPrefixer())
-      .pipe(cleanCSS({
-        2: {
-          specialComments: 0,
-        },
-      }))
-      .pipe(gulpif(dev, sourcemaps.write('../maps')))
-      .pipe(gulp.dest('dist/css'))
-      .pipe(browserSync.stream());
-  } else {
-    return gulp
-      .src('src/css/**/*.css')
-      .pipe(gulpif(dev, sourcemaps.init()))
-      .pipe(gulpCssimport({
-        extensions: ['css'],
-      }))
-      .pipe(autoPrefixer())
-      .pipe(cleanCSS({
-        2: {
-          specialComments: 0,
-        },
-      }))
+      .pipe(cleanCSS({ 2: { specialComments: 0 } }))
       .pipe(gulpif(dev, sourcemaps.write('../maps')))
       .pipe(gulp.dest('dist/css'))
       .pipe(browserSync.stream());
   }
-}
+  return gulp
+    .src('src/css/**/*.css')
+    .pipe(gulpif(dev, sourcemaps.init()))
+    .pipe(gulpCssimport({ extensions: ['css'] }))
+    .pipe(autoPrefixer())
+    .pipe(cleanCSS({ 2: { specialComments: 0 } }))
+    .pipe(gulpif(dev, sourcemaps.write('../maps')))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(browserSync.stream());
+};
 
 export const js = () => gulp
   .src([...allJsLibs, 'src/js/**/*.js'], { allowEmpty: true })
   .pipe(gulpif(dev, sourcemaps.init()))
-  .pipe(babel({
-    presets: ['@babel/preset-env'],
-    ignore: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js'],
-    // exclude: [...allJsLibs, 'src/js/**/*.min.js', 'src/libs/**/*.min.js']
-  }))
+  .pipe(babel({ presets: ['@babel/preset-env'] }))
   .pipe(terser())
   .pipe(concat('index.min.js'))
   .pipe(gulpif(dev, sourcemaps.write('../maps')))
@@ -93,62 +75,54 @@ export const img = () => gulp
     svgo: true,
   })))
   .pipe(gulp.dest('dist/img'))
-  .pipe(browserSync.stream({
-    once: true,
-  }));
-
+  .pipe(browserSync.stream({ once: true }));
 
 export const webp = () => gulp
   .src('src/img/**/*.{jpg,jpeg,png}')
-  .pipe(gulpWebp({
-    quality: 70,
-  }))
+  .pipe(gulpWebp({ quality: 70 }))
   .pipe(gulp.dest('dist/img'))
-  .pipe(browserSync.stream({
-    once: true,
-  }));
+  .pipe(browserSync.stream({ once: true }));
 
-export const avif = () => gulp
-  .src('src/img/**/*.{jpg,jpeg,png}')
-  .pipe(gulpAvif({
-    quality: 65,
-  }))
-  .pipe(gulp.dest('dist/img'))
-  .pipe(browserSync.stream({
-    once: true,
-  }));
+
+  export const avif = () => {
+    const validImages = gulpFilter(['**/*.{jpg,jpeg,png}'], { restore: true });
+  
+    return gulp
+      .src('src/img/**/*')
+      .pipe(validImages)
+      .on('data', (file) => {
+        console.log('Processing file:', file.path);
+      })
+      .pipe(gulpAvif({ quality: 65 }))
+      .on('error', function (err) {
+        console.error(`Ошибка при обработке AVIF: ${err.message}`);
+        console.error('Проверьте файл.');
+        this.emit('end'); // Prevent task failure
+      })
+      .pipe(gulp.dest('dist/img'))
+      .pipe(browserSync.stream({ once: true }));
+  };
+  
+  
 
 export const critCSS = () => gulp
   .src('dist/*.html')
-  .pipe(critical({
-    base: 'dist/',
-    inline: true,
-    css: ['dist/css/index.css',] // 'dist/css/bootstrap.css' can be added later
-  }))
-  .on('error', err => {
-    console.error(err.message)
-  })
-  .pipe(gulp.dest('dist'))
+  .pipe(critical({ base: 'dist/', inline: true, css: ['dist/css/index.css'] }))
+  .on('error', (err) => console.error(err.message))
+  .pipe(gulp.dest('dist'));
 
 export const copy = () => gulp
-  .src('src/fonts/**/*', {
-    base: 'src',
-  })
+  .src('src/fonts/**/*', { base: 'src' })
   .pipe(gulp.dest('dist'))
-  .pipe(browserSync.stream({
-    once: true,
-  }));
+  .pipe(browserSync.stream({ once: true }));
 
 export const server = () => {
   browserSync.init({
     ui: false,
     notify: false,
-    // tunnel: true,
-    server: {
-      baseDir: 'dist'
-    },
-    browser: ['vivaldi',],
-  })
+    server: { baseDir: 'dist' },
+    browser: ['vivaldi'],
+  });
   gulp.watch('src/**/*.html', html);
   gulp.watch(preProcessUse ? 'src/scss/**/*.scss' : 'src/css/**/*.ccss', style);
   gulp.watch('src/img/**/*.{jpg,jpeg,png,gif,svg}', img);
@@ -158,12 +132,9 @@ export const server = () => {
   gulp.watch('src/img/**/*.{jpg,jpeg,png}', avif);
 };
 
-export const clear = () => deleteAsync('dist/**/*', { force: true, });
+export const clear = () => deleteAsync('dist/**/*', { force: true });
 
-// launcher
-export const develop = async() => {
- dev = true;
-};
+export const develop = async () => { dev = true; };
 export const base = gulp.parallel(html, style, js, img, avif, webp, copy);
 export const build = gulp.series(clear, base, critCSS);
 export default gulp.series(develop, base, server);

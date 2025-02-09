@@ -1,10 +1,10 @@
-@import './components/_var';
-@import './components/_normalize';
-@import './components/_global-style';
-@import './components/_container';
-@import './components/_header';
-@import './components/_menu';
-@import './components/_footer';
+@use 'components/_var';
+@use 'components/_normalize';
+@use 'components/_global-style';
+@use 'components/_container';
+@use 'components/_header';
+@use 'components/_menu';
+@use 'components/_footer';
 
 .product {
 	&__main-section {
@@ -15,11 +15,11 @@
 		display: flex;
 		flex-flow: column wrap;
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			padding-top: 5px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			padding-top: 3px;
 		}
 	}
@@ -42,18 +42,18 @@
 		line-height: 130%;
 		margin-bottom: 25px;
 
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			font-size: 40px;
 			width: 540px;
 			margin-bottom: 20px;
 		}
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			font-size: 28px;
 			margin-bottom: 25px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			font-size: 18px;
 			width: 280px;
 			margin-bottom: 15px;
@@ -81,16 +81,16 @@
 		background: #FFF;
 		box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.25);
 
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			margin-bottom: 50px;
 			width: min-content;
 		}
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			margin-bottom: 40px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			margin-bottom: 30px;
 			width: 100%;
 			border-radius: 0;
@@ -122,17 +122,17 @@
 		padding-top: 64px;
 		padding-bottom: 50px;
 
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			padding-top: 40px;
 			padding-bottom: 30px;
 		}
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			padding-top: 30px;
 			padding-bottom: 25px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			padding-top: 16px;
 			padding-bottom: 15px;
 		}
@@ -142,15 +142,15 @@
 .product__img {
 
 	& img {
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			width: 540px;
 		}
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			width: 380px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			width: 280px;
 		}
 	}
@@ -162,17 +162,17 @@
 		width: 757px;
 		height: max-content;
 
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			width: 540px;
 			margin-bottom: 50px;
 		}
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			width: 380px;
 			margin-bottom: 40px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			width: 280px;
 			margin-bottom: 20px;
 		}
@@ -195,19 +195,19 @@
 		top: 20px;
 		right: 50px;
 
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			width: 66px;
 			height: 66px;
 			font-size: 20px;
 		}
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			width: 50px;
 			height: 50px;
 			font-size: 16px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			width: 32px;
 			height: 32px;
 			font-size: 12px;
@@ -223,7 +223,7 @@
 		font-weight: 700;
 		line-height: 34px;
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			font-size: 20px;
 			line-height: 24px;
 		}
@@ -238,7 +238,7 @@
 		text-decoration: line-through;
 		align-self: center;
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			font-size: 12px;
 		}
 	}
@@ -247,7 +247,7 @@
 .add-to-card {
 	margin-bottom: 16px;
 
-	@include breakpoint-small {
+	@include var.breakpoint-small {
 		margin-bottom: 13px;
 	}
 
@@ -258,7 +258,7 @@
 		gap: 0 24px;
 		margin-bottom: 7px;
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			column-gap: 18px;
 		}
 	}
@@ -270,7 +270,7 @@
 		line-height: 20.8px;
 		margin-bottom: 30px;
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			font-size: 12px;
 			margin-bottom: 20px;
 		}
@@ -284,7 +284,7 @@
 		height: min-content;
 		margin-bottom: 30px;
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			column-gap: 19px;
 		}
 	}
@@ -305,7 +305,7 @@
 		text-align: center;
 		padding: 12px 26px 12px 26px;
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			font-size: 12px;
 			height: 32px;
 			padding: 8px 18px 8px 18px
@@ -322,7 +322,7 @@
 		background-size: cover;
 		background-clip: border-box;
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			width: 20px;
 			height: 18.35px;
 		}
@@ -334,7 +334,7 @@
 		column-gap: 60px;
 		margin-bottom: 30px;
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			column-gap: 33px;
 			font-size: 12px;
 		}
@@ -368,15 +368,15 @@
 		font-weight: 700;
 		line-height: 130%;
 
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			font-size: 24px;
 		}
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			font-size: 18px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			font-size: 16px;
 		}
 	}
@@ -387,15 +387,15 @@
 		font-weight: 400;
 		line-height: 150%;
 
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			font-size: 18px;
 		}
 
-		@include breakpoint-medium {
+		@include var.breakpoint-medium {
 			font-size: 16px;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			font-size: 12px;
 		}
 	}
@@ -463,28 +463,28 @@
 	align-items: flex-end;
 
 	& svg {
-		@include breakpoint-medium-large {
+		@include var.breakpoint-medium-large {
 			width: 16.5px;
 			height: 18.33;
 		}
 
-		@include breakpoint-small {
+		@include var.breakpoint-small {
 			width: 10.5px;
 			height: 11.67;
 		}
 	}
 
-	@include breakpoint-medium-large {
+	@include var.breakpoint-medium-large {
 		font-size: 14px;
 	}
 
-	@include breakpoint-small {
+	@include var.breakpoint-small {
 		font-size: 8px;
 	}
 }
 
 .product__suggestions-section {
-	@include breakpoint-medium-large {
+	@include var.breakpoint-medium-large {
 		display: none;
 	}
 }

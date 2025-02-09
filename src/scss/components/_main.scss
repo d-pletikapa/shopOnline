@@ -1,3 +1,5 @@
+@use "var";
+
 .main {
   &__banner {
     position: relative;
@@ -518,7 +520,7 @@
   }
 }
 
-@include breakpoint-large {
+@include var.breakpoint-large {
   .main__offers {
     padding-left: 0;
     padding-right: 0;
@@ -555,7 +557,7 @@
   }
 }
 
-@include breakpoint-medium-large {
+@include var.breakpoint-medium-large {
   .header .container {
     margin-bottom: 0;
   }
@@ -724,7 +726,7 @@
   }
 }
 
-@include breakpoint-medium {
+@include var.breakpoint-medium {
 
   .main {
     &__label {
@@ -736,9 +738,6 @@
     }
 
     &__offers {
-      &-card {
-        border-radius: 12px;
-      }
 
       max-width: 700px;
       gap: 22px 20px;
@@ -753,6 +752,11 @@
       "card--6 card--6 card--8 card--10"
       "card--7 card--7 card--7 card--7"
       "card--7 card--7 card--7 card--7";
+
+
+      &-card {
+        border-radius: 12px;
+      }
 
       &-card--9 {
         max-width: calc(245px - var(--main-offers-w-shrink-1x2-halfed-card));
@@ -950,7 +954,7 @@
   }
 }
 
-@include breakpoint-small {
+@include var.breakpoint-small {
 
   .profit {
     &__offers {
@@ -998,10 +1002,6 @@
 
   .main {
     &__offers {
-      &-card {
-        border-radius: 8px;
-      }
-
       gap: 20px;
       /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
       /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;*/
@@ -1019,6 +1019,10 @@
       "card--8 card--10"
       "card--7 card--7";
       max-width: 280px;
+      
+      &-card {
+        border-radius: 8px;
+      }
     }
 
     &__header {

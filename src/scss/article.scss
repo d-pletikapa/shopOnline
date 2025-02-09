@@ -1,10 +1,10 @@
-@import './components/_var';
-@import './components/_normalize';
-@import './components/_global-style';
-@import './components/_container';
-@import './components/_header';
-@import './components/_menu';
-@import './components/_footer';
+@use 'components/_var';
+@use 'components/_normalize';
+@use 'components/_global-style';
+@use 'components/_container';
+@use 'components/_header';
+@use 'components/_menu';
+@use 'components/_footer';
 
 .main__breadcrumbs {
 	&-section {

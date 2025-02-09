@@ -1,3 +1,5 @@
+@use "var";
+
 .modal-menu {
   // min-height: 471px;
   max-width: var(--max-width-section);
@@ -16,7 +18,7 @@
     left: 50%;
     top: 327px;
     transform: translate(-50%, -50%);
-    @include breakpoint-medium-large  {
+    @include var.breakpoint-medium-large  {
       top: 450px;
     }
     @media screen and (max-width: 1334px) {
