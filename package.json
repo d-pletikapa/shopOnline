@@ -18,13 +18,13 @@
   "author": "Denis Pl.",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.23.0",
-    "@babel/preset-env": "^7.22.20",
-    "browser-sync": "^2.29.3",
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "browser-sync": "^3.0.2",
     "critical": "^5.1.1",
-    "del": "^7.0.0",
+    "del": "^7.1.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
+    "gulp-autoprefixer": "^9.0.0",
     "gulp-avif": "^1.1.1",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -37,7 +37,10 @@
     "gulp-sass": "^6.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
-    "gulp-webp": "^4.0.1",
-    "sass": "^1.64.2"
+    "gulp-webp": "^5.0.0",
+    "sass": "^1.71.1"
+  },
+  "dependencies": {
+    "@agentdeskai/browser-tools-mcp": "^1.2.0"
   }
 }
