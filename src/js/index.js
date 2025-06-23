@@ -1,4 +1,4 @@
-// article.js
+// article.js 
 const articleInit = () => {
   const getParamValueFromArticleUrl = (param) => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -135,7 +135,7 @@ const blogInit = () => {
 };
 
 // menu.js
-const menuInit = () => {
+function menuInit() {
   const header = document.querySelector('.header');
   const modal = document.createElement('div');
   modal.className = 'modal-menu';
@@ -226,7 +226,7 @@ const menuInit = () => {
     }
   });
 
-};
+}
 
 // timer.js
 const timerInit = () => {
@@ -432,3 +432,171 @@ const timerInit = () => {
   
   const deadline = '2024/02/10 14:53';
 };
+
+// 1. Получить список категорий с сервера и отрисовать их в меню и футере
+//    - Функция fetchCategories()
+const baseUrl = 'https://adventurous-fifth-hedge.glitch.me/api';
+async function fetchCategories() {
+  try {
+    const response = await fetch(`${baseUrl}/category`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const categories = await response.json();
+    return categories;
+  } catch (error) {
+    console.error('Ошибка при получении категорий:', error);
+  }
+}
+
+//    - Функция renderCategories(categories)
+function renderCategories(categories) {
+  // ====== МЕНЮ ======
+  const menuSection = document.querySelector('.modal-menu__section--1');
+  if (menuSection && Array.isArray(categories)) {
+    // Удаляем все старые списки меню, чтобы не было дублей
+    menuSection.querySelectorAll('.modal-menu__list').forEach(list => list.remove());
+
+    // Считаем, сколько нужно списков (по 5 категорий в каждом)
+    const batchSize = 5;
+    const menuBatches = Math.ceil(categories.length / batchSize);
+
+    // Для каждой "пачки" категорий создаём новый список
+    for (let i = 0; i < menuBatches; i++) {
+      const ul = document.createElement('ul');
+      ul.className = 'modal-menu__list';
+      // Берём 5 категорий для этой пачки
+      const batch = categories.slice(i * batchSize, (i + 1) * batchSize);
+      batch.forEach(category => {
+        const li = document.createElement('li');
+        li.className = 'modal-menu__item';
+        // Формируем ссылку с encodeURIComponent
+        const url = `/category?${encodeURIComponent(category)}.html`;
+        li.innerHTML = `<a href="${url}" class="modal-menu__link">${category}</a>`;
+        ul.appendChild(li);
+      });
+      // Добавляем список в меню
+      menuSection.appendChild(ul);
+    }
+  }
+
+  // ====== ФУТЕР ======
+  const footerCatalogue = document.querySelector('.footer__catalogue');
+  if (footerCatalogue && Array.isArray(categories)) {
+    // Удаляем все старые списки футера
+    footerCatalogue.querySelectorAll('.footer__catalogue-list').forEach(list => list.remove());
+
+    // Считаем, сколько нужно списков (по 5 категорий в каждом)
+    const batchSize = 5;
+    const footerBatches = Math.ceil(categories.length / batchSize);
+
+    // Для каждой "пачки" категорий создаём новый список
+    for (let i = 0; i < footerBatches; i++) {
+      const ul = document.createElement('ul');
+      ul.className = 'footer__catalogue-list';
+      // Берём 5 категорий для этой пачки
+      const batch = categories.slice(i * batchSize, (i + 1) * batchSize);
+      batch.forEach(category => {
+        const li = document.createElement('li');
+        li.className = 'catalogue-list__item';
+        // Формируем ссылку с encodeURIComponent
+        const url = `/category?${encodeURIComponent(category)}.html`;
+        li.innerHTML = `<a href="${url}">${category}</a>`;
+        ul.appendChild(li);
+      });
+      // Добавляем список в футер
+      footerCatalogue.appendChild(ul);
+    }
+  }
+}
+
+// Универсальная функция для рендера хлебных крошек
+async function renderBreadcrumbs() {
+  const breadcrumbs = document.querySelector('.main__breadcrumbs');
+  if (!breadcrumbs) return;
+
+  // Главная и корзина — не рендерим крошки
+  if (document.body.classList.contains('main-page') || document.body.classList.contains('cart-page')) {
+    return;
+  }
+
+  // Категория
+  if (document.body.classList.contains('category-page')) {
+    // Получаем категорию из URL
+    const query = window.location.search.substring(1);
+    const clean = query.replace(/\.html$/, '');
+    const category = decodeURIComponent(clean);
+    breadcrumbs.innerHTML = `
+      <p>
+        <a href="./index.html">Главная</a>
+        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z" fill="#525252" />
+        </svg>
+        <a href="./category?${encodeURIComponent(category)}.html">${category}</a>
+      </p>
+    `;
+    return;
+  }
+
+  // Товар
+  if (document.body.classList.contains('product-page')) {
+    // Получаем id товара из URL
+    const query = window.location.search.substring(1);
+    const id = query.replace(/\.html$/, '');
+    try {
+      const response = await fetch(`https://adventurous-fifth-hedge.glitch.me/api/goods/${id}`);
+      if (!response.ok) throw new Error('Ошибка загрузки товара');
+      const product = await response.json();
+      const category = product.category;
+      const title = product.title;
+      breadcrumbs.innerHTML = `
+        <p>
+          <a href="./index.html">Главная</a>
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z" fill="#525252" />
+          </svg>
+          <a href="./category?${encodeURIComponent(category)}.html">${category}</a>
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z" fill="#525252" />
+          </svg>
+          <span>${title}</span>
+        </p>
+      `;
+    } catch (e) {
+      breadcrumbs.innerHTML = '';
+    }
+    return;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  if (typeof menuInit === 'function') menuInit();
+
+  // Для главной страницы
+  if (document.body.classList.contains('main-page')) {
+    if (typeof timerInit === 'function') timerInit();
+    // другие инициализации для главной
+  }
+
+  // Для корзины
+  if (document.body.classList.contains('cart-page')) {
+    // инициализация для cart
+  }
+
+  // Для блога
+  if (document.body.classList.contains('blog-page')) {
+    if (typeof blogInit === 'function') blogInit();
+  }
+
+  // Для статьи
+  if (document.body.classList.contains('article-page')) {
+    if (typeof articleInit === 'function') articleInit();
+  }
+
+  // Для всех страниц — меню и футер
+  const categories = await fetchCategories();
+  renderCategories(categories);
+
+  // Рендерим хлебные крошки централизованно
+  renderBreadcrumbs();
+});

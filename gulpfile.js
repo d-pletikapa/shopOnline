@@ -121,7 +121,7 @@ export const server = () => {
     ui: false,
     notify: false,
     server: { baseDir: 'dist' },
-    browser: ['Edge'],
+    browser: ['vivaldi'],
   });
   gulp.watch('src/**/*.html', html);
   gulp.watch(preProcessUse ? 'src/scss/**/*.scss' : 'src/css/**/*.ccss', style);

@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41983231-21cf-449e-a5eb-6466a5a0eda0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/maps/cart.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/maps/cart.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/cart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.env" beforeDir="false" afterPath="$PROJECT_DIR$/src/.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +82,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -112,6 +108,9 @@
       <workItem from="1741765338109" duration="34000" />
       <workItem from="1741765378782" duration="81000" />
       <workItem from="1741765467943" duration="66000" />
+      <workItem from="1743069296739" duration="42000" />
+      <workItem from="1744567889132" duration="53000" />
+      <workItem from="1744567974733" duration="32000" />
     </task>
     <servers />
   </component>

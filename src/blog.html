@@ -8,23 +8,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
 	<!-- <link rel="stylesheet" href="./css/blog.css"> -->
-	<script defer src="./js/index.min.js"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const createLink = (url) => {
-				const link = document.createElement('link');
-				link.rel = 'stylesheet';
-				link.href = url;
-				document.head.append(link);
-			}
-			createLink('css/blog.css');
-			menuInit();
-			blogInit();
-		});
-	</script>
+	<link rel="stylesheet" href="/scss/blog.scss">
+  <script defer src="/libs/jquery-3.7.0.min.js"></script>
+	<!-- Подключение основного JS как ES-модуля для Vite -->
+	<script type="module" src="/js/index.js"></script>
 </head>
 
-<body>
+<body class="blog-page">
 	<header class="header">
 		<div class="container">
 			<nav class="header__navigation">

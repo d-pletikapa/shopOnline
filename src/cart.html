@@ -8,22 +8,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="./css/product.css"> -->
-  <script defer src="./js/index.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const createLink = (url) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = url;
-        document.head.append(link);
-      }
-      createLink('css/cart.css');
-      menuInit();
-    });
-  </script>
+  <link rel="stylesheet" href="/scss/cart.scss">
+  <script defer src="/libs/jquery-3.7.0.min.js"></script>
+  <script type="module" src="/js/index.js"></script>
+  <script type="module" src="/js/cart.js"></script>
 </head>
 
-<body>
+<body class="cart-page">
   <header class="header">
     <div class="container">
       <nav class="header__navigation">
@@ -125,9 +116,9 @@
                 </span>
             </p>
             <div class="product-item-controls">
-              <button class="product-item-btn-inc">−</button>
+              <button class="product-item-btn-dec">−</button>
               <span class="product-item-btn-counter">1</span>
-              <button class="product-item-btn-dec">+</button>
+              <button class="product-item-btn-inc">+</button>
             </div>
             <p class="product-item-prices">
               <span class="product-item-price-1">109 090 ₽</span>
@@ -153,9 +144,9 @@
                 </span>
             </p>
             <div class="product-item-controls">
-              <button class="product-item-btn-inc">−</button>
+              <button class="product-item-btn-dec">−</button>
               <span class="product-item-btn-counter">1</span>
-              <button class="product-item-btn-dec">+</button>
+              <button class="product-item-btn-inc">+</button>
             </div>
             <p class="product-item-prices">
               <span class="product-item-price-1">109 090 ₽</span>

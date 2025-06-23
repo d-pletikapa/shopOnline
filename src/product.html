@@ -8,22 +8,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="./css/product.css"> -->
-  <script defer src="./js/index.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const createLink = (url) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = url;
-        document.head.append(link);
-      }
-      createLink('css/product.css');
-      menuInit();
-    });
-  </script>
+  <link rel="stylesheet" href="/scss/product.scss">
+  <script defer src="/libs/jquery-3.7.0.min.js"></script>
+  <script type="module" src="/js/index.js"></script>
+  <script type="module" src="/js/product.js"></script>
 </head>
 
-<body>
+<body class="product-page">
   <header class="header">
     <div class="container">
       <nav class="header__navigation">
@@ -91,33 +82,28 @@
             <path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
               fill="#525252" />
           </svg>
-          <a href="./index.html">Главная</a>
-          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.442383 8.4425L3.87738 5L0.442383 1.5575L1.49988 0.5L5.99988 5L1.49988 9.5L0.442383 8.4425Z"
-              fill="#525252" />
-          </svg>
-          <a href="#">ASUS</a>
+          <a href="./index.html">Товар</a>
         </p>
       </nav>
     </section>
 
     <div class="container">
       <section class="product__main-section">
-        <h1 class="product__title">15.6" Игровой ноутбук ASUS G513IE-HN004T</h1>
+        <h1 class="product__title"></h1>
         <div class="product__card">
           <div class="product__img-wrapper">
             <div class="product__img-label">-15%</div>
             <picture class="product__img">
-              <source srcset="./img/__img-product/f3209b43a18a3f919281c0fea2c92afb.avif" type="image/avif">
+              <!-- <source srcset="./img/__img-product/f3209b43a18a3f919281c0fea2c92afb.avif" type="image/avif">
               <source srcset="./img/__img-product/f3209b43a18a3f919281c0fea2c92afb.webp" type="image/webp">
               <img src="./img/__img-product/f3209b43a18a3f919281c0fea2c92afb.png"
-                alt="Игровой ноутбук ASUS G513IE-HN004T 15.6">
+                alt="Игровой ноутбук ASUS G513IE-HN004T 15.6"> -->
             </picture>
           </div>
           <div class="product__add-to-card">
             <div class="add-to-card__price">
-              <p class="price__after-disc">109 090 ₽</p>
-              <p class="price__before-disc">140 590 ₽</p>
+              <p class="price__after-disc"></p>
+              <p class="price__before-disc"></p>
             </div>
             <p class="add-to-card__credit">В кредит от 5600 ₽</p>
             <div class="add-to-card__btns">
@@ -146,17 +132,7 @@
           </div>
           <div class="add-to-card__description">
             <p class="description__title">Описание:</p>
-            <p class="description__text">ROG Strix G15/17 – это игровая платформа для массового пользователя, работающая
-              на базе операционной
-              системы Windows 10 Pro. Благодаря мощной конфигурации, которая может включать в себя процессор AMD Ryzen
-              9
-              5900HX и видеокарту GeForce RTX 3070, этот ноутбук подходит для широкого спектра задач. Его дисплей
-              доступен в двух вариантах: с киберспортивного уровня частотой обновления в 300 Гц или с высоким
-              разрешением WQHD. Оба варианта обладают низким временем отклика (3 мс) и поддерживают адаптивную
-              синхронизацию Adaptive-Sync. Оптимизированная система охлаждения гарантирует стабильную работу
-              устройства
-              под тяжелыми нагрузками, поэтому ROG Strix G15/17 позволит вам проявить все свое мастерство в любой
-              игровой ситуации!
+            <p class="description__text">
             </p>
           </div>
         </div>

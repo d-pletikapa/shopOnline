@@ -8,23 +8,14 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="./css/product.css"> -->
-  <script defer src="./js/index.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const createLink = (url) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = url;
-        document.head.append(link);
-      }
-      createLink('css/category.css');
-      menuInit();
-    });
-  </script>
+  <link rel="stylesheet" href="/scss/category.scss">
+  <script defer src="/libs/jquery-3.7.0.min.js"></script>
+  <script type="module" src="/js/index.js"></script>
+  <script type="module" src="/js/category.js"></script>
 </head>
 
 
-<body>
+<body class="category-page">
   <header class="header">
     <div class="container">
       <nav class="header__navigation">
@@ -97,7 +88,7 @@
         <h2 class="suggestions-section__title">Ноутбуки</h2>
         <div class="suggestions-section__carousel">
 
-          <div class="carousel__minicard">
+          <!-- <div class="carousel__minicard">
             <picture class="minicard__img">
               <source srcset="./img/__minicard/photo_1.avif" type="image/avif">
               <source srcset="./img/__minicard/photo_1.webp" type="image/webp">
@@ -299,109 +290,7 @@
               <p class="minicard__price minicard__price--before">105 999 ₽</p>
             </div>
             <p class="minicard__name">Ноутбук ASUS ZenBook Pro</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_1.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_1.webp" type="image/webp">
-              <img src="./img/__minicard/photo_1.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">96 320 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук Dell</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_2.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_2.webp" type="image/webp">
-              <img src="./img/__minicard/photo_2.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">64 949 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук HP 250</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_3.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_3.webp" type="image/webp">
-              <img src="./img/__minicard/photo_3.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">37 980 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук HP 15</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <div class="minicard__img-label">-10%</div>
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_4.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_4.webp" type="image/webp">
-              <img src="./img/__minicard/photo_4.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">102 680 ₽</p>
-              <p class="minicard__price minicard__price--before">105 999 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук ASUS ZenBook Pro</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <div class="minicard__img-label">-10%</div>
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_4.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_4.webp" type="image/webp">
-              <img src="./img/__minicard/photo_4.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">102 680 ₽</p>
-              <p class="minicard__price minicard__price--before">105 999 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук ASUS ZenBook Pro</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_1.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_1.webp" type="image/webp">
-              <img src="./img/__minicard/photo_1.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">96 320 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук Dell</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_2.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_2.webp" type="image/webp">
-              <img src="./img/__minicard/photo_2.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">64 949 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук HP 250</p>
-          </div>
-
-          <div class="carousel__minicard">
-            <div class="minicard__img-label">-10%</div>
-            <picture class="minicard__img">
-              <source srcset="./img/__minicard/photo_4.avif" type="image/avif">
-              <source srcset="./img/__minicard/photo_4.webp" type="image/webp">
-              <img src="./img/__minicard/photo_4.png" alt="Ноутбук Dell" style="width:420px; height:295px;">
-            </picture>
-            <div class="minicard__price-wrapper">
-              <p class="minicard__price">102 680 ₽</p>
-              <p class="minicard__price minicard__price--before">105 999 ₽</p>
-            </div>
-            <p class="minicard__name">Ноутбук ASUS ZenBook Pro</p>
-          </div>
+          </div> -->
 
         </div>
       </section>

@@ -1,47 +1,34 @@
 {
-  "name": "gulp-config",
+  "name": "shoponline",
   "version": "1.0.0",
-  "description": "startup gulp configuration for personal use.",
+  "description": "ShopOnline frontend project",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "figma-mcp": "npx figma-developer-mcp --figma-api-key=${FIGMA_API_KEY} -y" 
+    "dev": "npm-run-all -p genimg:watch vite:dev",
+    "genimg": "node scripts/gen-images.js",
+    "genimg:watch": "node scripts/gen-images.js --watch",
+    "vite:dev": "npx vite",
+    "build": "npx vite build && npm run genimg",
+    "preview": "npx vite preview"
   },
   "browserslist": [
     "cover 99.5%",
     "not IE 11"
   ],
-  "keywords": [
-    "gulp",
-    "config"
-  ],
   "author": "Denis Pl.",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/preset-env": "^7.23.9",
-    "browser-sync": "^3.0.2",
-    "critical": "^5.1.1",
-    "del": "^7.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^9.0.0",
-    "gulp-avif": "^1.1.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssimport": "^7.0.0",
-    "gulp-filter": "^9.0.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-if": "^3.0.0",
-    "gulp-image": "^6.3.1",
-    "gulp-sass": "^6.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-terser": "^2.1.0",
-    "gulp-webp": "^5.0.0",
-    "sass": "^1.71.1"
+    "chokidar": "^4.0.3",
+    "fast-glob": "^3.3.3",
+    "npm-run-all": "^4.1.5",
+    "sharp": "^0.34.2",
+    "vite": "^6.3.5",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-sharp": "^1.0.0",
+    "vite-plugin-static-copy": "^3.0.0"
   },
   "dependencies": {
-    "@agentdeskai/browser-tools-mcp": "^1.2.0"
+    "@agentdeskai/browser-tools-mcp": "^1.2.1"
   }
 }

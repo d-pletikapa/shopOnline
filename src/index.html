@@ -9,26 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
   <title>Grid</title>
   <!-- <link rel="stylesheet" href="./css/index.css"> -->
-  <script defer src="./js/index.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const createLink = (url) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = url;
-        document.head.append(link);
-      }
-      createLink('css/index.css');
-      menuInit();
-    });
-  </script>
-  <script type="module">
-    timerInit();
-  </script>
+  <link rel="stylesheet" href="/scss/index.scss">
+  <script defer src="/libs/jquery-3.7.0.min.js"></script>
+  <script type="module" src="/js/index.js"></script>
 
 </head>
 
-<body>
+<body class="main-page">
 
   <header class="header">
     <div class="container">
@@ -149,7 +136,7 @@
         <a class="main__offers-card main__offers-card--3" href="#">
           <div class="main__card-3--highlight">
             <p>Вторая пара кроссовок
-              <span>в&nbspподарок!</span>
+              <span>в&nbsp;подарок!</span>
             </p>
           </div>
         </a>
